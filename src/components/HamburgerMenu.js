@@ -6,13 +6,13 @@ const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    
   }
-  
 `;
 const MenuIcon = styled.button`
   position: absolute;
   top: 2rem;
-  right: 2rem;
+  left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -27,7 +27,7 @@ const MenuIcon = styled.button`
     width: 1.5rem;
     height: 0.2rem;
     background: black;
-    border-radius: 15px;
+    border-radius: 5px;
     transform-origin: 1px;
     position: relative;
     top: 0;
@@ -50,24 +50,26 @@ const MenuIcon = styled.button`
 const MenuLinks = styled.nav`
   display: flex;
   flex-direction: column;
+
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100vh;
   width: 100%;
-  background: #d7d7d7;
+  background: white;
 
   position: absolute;
   top: 0;
   right: 0;
-  transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(100%)")};
+  transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 300ms;
   ul {
     list-style-type: none;
+    padding: 0;
   }
 
   li {
-    margin-top: 1rem;
+    margin-top: 2.5rem;
   }
   a {
     text-decoration: none;
@@ -80,6 +82,7 @@ const MenuLinks = styled.nav`
     }
   }
 `;
+
 
 const Hamburger = () => {
   const [nav, showNav] = useState(false);
