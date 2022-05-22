@@ -10,22 +10,21 @@ const Global = createGlobalStyle`
   }
 `;
 const MenuIcon = styled.button`
-  position: absolute;
+  position: fixed;
   top: 2rem;
   left: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 1.5rem;
-  height: 1.5rem;
+  height: 2.5rem;
   background: transparent;
   border: none;
   cursor: pointer;
   z-index: 5;
 
   div {
-    width: 1.5rem;
-    height: 0.2rem;
+    width: 2.35rem;
+    height: 0.24rem;
     background: black;
     border-radius: 5px;
     transform-origin: 1px;
