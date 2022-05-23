@@ -21,7 +21,7 @@ const MenuIcon = styled.button`
   background: transparent;
   border: none;
   cursor: pointer;
-  z-index: 5;
+  z-index: 9999;
 
   div {
     width: 2.37rem;
@@ -60,9 +60,9 @@ const MenuLinks = styled.nav`
   height: 100vh;
   width: 100%;
   background: white;
-
+  z-index: 9998;
   position: absolute;
-  top: -10%;
+  
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 300ms;
@@ -108,16 +108,16 @@ const Hamburger = () => {
             <Link to="#">Biography</Link>
           </li>
           <li>
-            <Link to="#">Media</Link>
+            <Link to="../pages/404.js">Media</Link>
           </li>
           <li>
-            <a href="#">Blog</a>
+            <a href="../pages/404.js">Blog</a>
           </li>
           <li>
-            <a href="#">Gallery</a>
+            <a href="../pages/404.js">Gallery</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="../pages/404.js">Contact</a>
           </li>
         </ul>
       </MenuLinks>
