@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import { Link } from 'gatsby'
-
+import { Link } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
+import { StaticImageStyle } from "./Hamburger.module.css";
 const Global = createGlobalStyle`
   body {
     margin: 0;
@@ -11,9 +12,10 @@ const Global = createGlobalStyle`
   }
 `;
 const MenuIcon = styled.button`
-  position: fixed;
   top: 2rem;
   left: 2rem;
+  margin-top: 2em;
+  margin-left:2em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -63,7 +65,7 @@ const MenuLinks = styled.nav`
   background: white;
   z-index: 9998;
   position: fixed;
-  
+
   top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(-100%)")};
@@ -92,6 +94,16 @@ const MenuLinks = styled.nav`
   }
 `;
 
+const MobileBar = styled.div`
+  width: 100%;
+  height: 20%;
+  max-height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: orange;
+  z-index: 20000;
+`;
 
 const Hamburger = () => {
   const [nav, showNav] = useState(false);
@@ -99,11 +111,13 @@ const Hamburger = () => {
   return (
     <div>
       <Global />
-      <MenuIcon nav={nav} onClick={() => showNav(!nav) }>
-        <div />
-        <div />
-        <div />
-      </MenuIcon>
+      <MobileBar>
+        <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
+          <div />
+          <div />
+          <div />
+        </MenuIcon>
+      </MobileBar>
       <MenuLinks nav={nav}>
         <ul>
           <li>

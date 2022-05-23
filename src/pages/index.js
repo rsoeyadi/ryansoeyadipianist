@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from '../components/Layout'
 import Aboutimg from '../components/Aboutimg'
-import Heading from '../components/Heading'
+import BiographySection from '../components/BiographySection'
 const index = () => {
 
   return (
@@ -9,7 +9,7 @@ const index = () => {
       <Layout />
       
       <Aboutimg />
-      <Heading heading="Biography" />
+      <BiographySection />
       
       
     </>
