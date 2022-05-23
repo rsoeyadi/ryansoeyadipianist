@@ -2,8 +2,12 @@ import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 
 const IconsWrapper = styled.div`
-    display: inline-block;
-`
+  display: inline-block;
+  margin-bottom: 1em;
+  svg {
+    cursor: pointer;
+  }
+`;
 const SocialMediaIcons = () => {
   return (
     <IconsWrapper>

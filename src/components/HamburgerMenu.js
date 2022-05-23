@@ -97,6 +97,7 @@ const MobileBar = styled.div`
   width: 100%;
   height: 20%;
   max-height: 100px;
+  background-color: white;
   position: fixed;
   top: 0;
   left: 0;
