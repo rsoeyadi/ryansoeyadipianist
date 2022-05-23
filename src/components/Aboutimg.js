@@ -10,7 +10,9 @@ const StaticImageWrapper = styled.div`
 `;
 
 const ImageCaption = styled.p`
-  font-size: 1em;
+  font-size: 0.8em;
+  color: grey;
+  margin-bottom: 0;
 `;
 const Aboutimg = () => {
   return (

@@ -4,13 +4,14 @@ import Paragraph from './Paragraph'
 import styled from "styled-components";
 
 const BiographySectionWrapper = styled.div`
-    padding: 1em;
+    padding: 0 1em 1em 1em;
+    
 
 `
 const BiographySection = () => {
   return (
     <BiographySectionWrapper>
-      <Heading>Biography</Heading>
+      <Heading>BIOGRAPHY</Heading>
       <Paragraph>
         Pianist Ryan Soeyadi is first prize winner of the 2018 Kosciuzko
         Foundation Chopin Competition in Washington D.C. and a sought-after
