@@ -88,7 +88,7 @@ const MenuLinks = styled.nav`
     }
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and ((min-width: 1024px) and (max-height: 450px ) {
     display: none;
   }
 `;
