@@ -14,7 +14,7 @@ const MenuIcon = styled.button`
   top: 2rem;
   left: 2rem;
   margin-top: 2em;
-  margin-left:2em;
+  margin-left: 2em;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -47,6 +47,10 @@ const MenuIcon = styled.button`
     }
   }
   @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  @media only screen and (max-height: 430px) {
     display: none;
   }
 `;
@@ -88,7 +92,11 @@ const MenuLinks = styled.nav`
     }
   }
 
-  @media only screen and ((min-width: 1024px) and (max-height: 450px ) {
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  @media only screen and (max-height: 430px) {
     display: none;
   }
 `;
@@ -102,6 +110,14 @@ const MobileBar = styled.div`
   top: 0;
   left: 0;
   z-index: 20000;
+
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
+
+  @media only screen and (max-height: 430px) {
+    display: none;
+  }
 `;
 
 const Hamburger = () => {
