@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
-import { StaticImageStyle } from "./Hamburger.module.css";
+
 const Global = createGlobalStyle`
   body {
     margin: 0;
@@ -101,7 +100,6 @@ const MobileBar = styled.div`
   position: fixed;
   top: 0;
   left: 0;
-  background-color: orange;
   z-index: 20000;
 `;
 
@@ -135,6 +133,7 @@ const Hamburger = () => {
           <li>
             <a href="../pages/404.js">Contact</a>
           </li>
+          
         </ul>
       </MenuLinks>
     </div>

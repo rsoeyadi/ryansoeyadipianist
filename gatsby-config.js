@@ -14,6 +14,6 @@ module.exports = {
         fonts: [`Lora`],
         display: "swap",
       },
-    },
+    },  
   ],
 };
