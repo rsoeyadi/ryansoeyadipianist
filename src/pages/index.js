@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import Layout from '../components/Layout'
-import styled, { createGlobalStyle } from "styled-components";
 import Aboutimg from '../components/Aboutimg'
+import Heading from '../components/Heading'
 const index = () => {
 
   return (
     <>
       <Layout />
-      Biography
+      
       <Aboutimg />
+      <Heading heading="Biography" />
       
       
     </>

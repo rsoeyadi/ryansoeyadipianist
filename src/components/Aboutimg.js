@@ -4,19 +4,26 @@ import { StaticImageStyle } from "./Aboutimg.module.css";
 import styled, { createGlobalStyle } from "styled-components";
 
 const StaticImageWrapper = styled.div`
-  padding: 1.5em;
+  padding: 1.5em 1.5em 0 1.5em;
   margin-top: 10em;
-  background-color: green;
-`
+  max-width: 768px;
+`;
+
+const ImageCaption = styled.p`
+  font-size: 1em;
+`;
 const Aboutimg = () => {
   return (
-    <StaticImageWrapper>
-      <StaticImage
-        src="../images/about-img.jpg"
-        alt="Ryan Soeyadi Headshot"
-        className={StaticImageStyle}
-      />
-    </StaticImageWrapper>
+    <>
+      <StaticImageWrapper>
+        <StaticImage
+          src="../images/about-img.jpg"
+          alt="Ryan Soeyadi Headshot"
+          className={StaticImageStyle}
+        />
+        <ImageCaption>Photo by Jiyang Chen</ImageCaption>
+      </StaticImageWrapper>
+    </>
   );
 };
 
