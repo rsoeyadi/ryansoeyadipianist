@@ -1,11 +1,17 @@
 import React, { useState } from "react";
 import Layout from '../components/Layout'
-
-const Index = () => {
+import styled, { createGlobalStyle } from "styled-components";
+import Aboutimg from '../components/Aboutimg'
+const index = () => {
 
   return (
-   <Layout />
+    <>
+      <Layout />
+      <Aboutimg />
+      
+      
+    </>
   );
 };
 
-export default Index;
+export default index;
