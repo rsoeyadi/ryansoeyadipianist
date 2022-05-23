@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
+import { Link } from 'gatsby'
 
 const Global = createGlobalStyle`
   body {
@@ -44,6 +45,9 @@ const MenuIcon = styled.button`
       transform: ${({ nav }) => (nav ? "rotate(-45deg)" : "rotate(0)")};
     }
   }
+  @media only screen and (min-width: 1024px) {
+    display: none;
+  }
 `;
 
 const MenuLinks = styled.nav`
@@ -80,6 +84,10 @@ const MenuLinks = styled.nav`
       transition: color 220ms;
     }
   }
+
+  @media only screen and (min-width: 1024px) {
+      display: none;
+  }
 `;
 
 
@@ -97,13 +105,16 @@ const Hamburger = () => {
       <MenuLinks nav={nav}>
         <ul>
           <li>
-            <a href="#">Home</a>
+            <Link to="#">Biography</Link>
           </li>
           <li>
-            <a href="#">Bio</a>
+            <Link to="#">Media</Link>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="#">Blog</a>
+          </li>
+          <li>
+            <a href="#">Gallery</a>
           </li>
           <li>
             <a href="#">Contact</a>
