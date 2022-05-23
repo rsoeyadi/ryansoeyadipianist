@@ -7,7 +7,7 @@ const Global = createGlobalStyle`
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    
+    height: 100%;
   }
 `;
 const MenuIcon = styled.button`
@@ -57,12 +57,14 @@ const MenuLinks = styled.nav`
   justify-content: center;
   align-items: center;
   text-align: center;
-  height: 100vh;
+  height: 100%;
+
   width: 100%;
   background: white;
   z-index: 9998;
-  position: absolute;
+  position: fixed;
   
+  top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 300ms;
@@ -86,7 +88,7 @@ const MenuLinks = styled.nav`
   }
 
   @media only screen and (min-width: 1024px) {
-      display: none;
+    display: none;
   }
 `;
 
@@ -97,7 +99,7 @@ const Hamburger = () => {
   return (
     <div>
       <Global />
-      <MenuIcon nav={nav} onClick={() => showNav(!nav)}>
+      <MenuIcon nav={nav} onClick={() => showNav(!nav) }>
         <div />
         <div />
         <div />

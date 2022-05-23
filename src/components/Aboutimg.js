@@ -5,6 +5,8 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const StaticImageWrapper = styled.div`
   padding: 1.5em;
+  margin-top: 10em;
+  background-color: green;
 `
 const Aboutimg = () => {
   return (
