@@ -88,7 +88,7 @@ const MenuLinks = styled.nav`
     font-size: 1.5rem;
 
     :hover {
-      color: #6ab4ff;
+      color: #6991ff;
       transition: color 220ms;
     }
   }
@@ -121,8 +121,10 @@ const MobileBar = styled.div`
   }
 `;
 
+
 const Hamburger = () => {
   const [nav, showNav] = useState(false);
+
 
   return (
     <div>
@@ -137,19 +139,29 @@ const Hamburger = () => {
       <MenuLinks nav={nav}>
         <ul>
           <li>
-            <Link to="#">Biography</Link>
+            <Link to="/" activeStyle={{ color: "#6991FF" }}>
+              Biography
+            </Link>
           </li>
           <li>
-            <Link to="../pages/404.js">Media</Link>
+            <Link to="../pages/404.js" activeStyle={{ color: "#6991FF" }}>
+              Media
+            </Link>
           </li>
           <li>
-            <Link to="../pages/404.js">Blog</Link>
+            <Link to="/blog" activeStyle={{ color: "#6991FF" }}>
+              Blog
+            </Link>
           </li>
           <li>
-            <Link to="../pages/404.js">Gallery</Link>
+            <Link to="../pages/404.js" activeStyle={{ color: "#6991FF" }}>
+              Gallery
+            </Link>
           </li>
           <li>
-            <Link to="../pages/404.js">Contact</Link>
+            <Link to="../pages/404.js" activeStyle={{ color: "#6991FF" }}>
+              Contact
+            </Link>
           </li>
           <li>
             <SocialMediaIcons />
