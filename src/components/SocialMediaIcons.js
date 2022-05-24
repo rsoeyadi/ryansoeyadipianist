@@ -7,6 +7,7 @@ const IconsWrapper = styled.div`
   svg {
     cursor: pointer;
   }
+  opacity: 0.99;
 `;
 const SocialMediaIcons = () => {
   return (

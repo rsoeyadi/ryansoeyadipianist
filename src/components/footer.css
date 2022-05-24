@@ -1,0 +1,16 @@
+footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+        padding: 0.5em;
+}
+
+.flexThisBox {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
