@@ -19,7 +19,7 @@ const Layout = (props) => {
       <main>{children}</main>
       <footer>
         <div>
-          <FooterP>Made with</FooterP>
+          <FooterP>Built with</FooterP>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 106 28"
@@ -38,8 +38,8 @@ const Layout = (props) => {
             />
           </svg>
         </div>
-        <div className = "footer">
-          <FooterP>©2022 Ryan Soeyadi</FooterP>
+        <div className="footer">
+          <FooterP>©{new Date().getFullYear()} Ryan Soeyadi</FooterP>
           <FooterP> All Rights Reserved </FooterP>
           <FooterP>Website Made By Ryan Soeyadi</FooterP>
         </div>

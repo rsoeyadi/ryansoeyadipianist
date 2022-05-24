@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 
 const Global = createGlobalStyle`
   body {
@@ -142,15 +143,17 @@ const Hamburger = () => {
             <Link to="../pages/404.js">Media</Link>
           </li>
           <li>
-            <a href="../pages/404.js">Blog</a>
+            <Link to="../pages/404.js">Blog</Link>
           </li>
           <li>
-            <a href="../pages/404.js">Gallery</a>
+            <Link to="../pages/404.js">Gallery</Link>
           </li>
           <li>
-            <a href="../pages/404.js">Contact</a>
+            <Link to="../pages/404.js">Contact</Link>
           </li>
-          
+          <li>
+            <SocialMediaIcons />
+          </li>
         </ul>
       </MenuLinks>
     </div>
