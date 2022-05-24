@@ -9,11 +9,12 @@ const StaticImageWrapper = styled.div`
   max-width: 768px;
 
   img {
-    animation: fadeIn 2s;
-    -webkit-animation: fadeIn 2s;
-    -moz-animation: fadeIn 2s;
-    -o-animation: fadeIn 2s;
-    -ms-animation: fadeIn 2s;
+    animation: fadeIn 3.5s;
+    -webkit-animation: fadeIn 3.5s;
+    -moz-animation: fadeIn 3.5s;
+    -o-animation: fadeIn 3.5s;
+    -ms-animation: fadeIn 3.5s;
+    border-radius: 50px;
   }
   @keyframes fadeIn {
     0% {
@@ -76,7 +77,6 @@ const Aboutimg = () => {
           alt="Ryan Soeyadi Headshot"
           className={StaticImageStyle}
           placeholder="tracedSVG"
-          quality="40"
         />
         <ImageCaption>Photo by Jiyang Chen</ImageCaption>
       </StaticImageWrapper>
