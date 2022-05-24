@@ -140,7 +140,7 @@ const Hamburger = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={{ textDecoration: "underline" }}>
-              Biography
+              About
             </Link>
           </li>
           <li>

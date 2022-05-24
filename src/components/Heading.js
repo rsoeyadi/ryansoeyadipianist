@@ -4,8 +4,7 @@ const H1 = styled.h1`
   // https://1stwebdesigner.com/css-text-effects/
   font-weight: 300;
   margin: 0 auto;
-  padding: 0 140px 0 0;
-  display: inline;
+  display: block;
   margin-bottom: 0;
 
   text-align: center;
