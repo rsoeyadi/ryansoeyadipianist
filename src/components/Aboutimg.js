@@ -18,13 +18,13 @@ const ImageCaption = styled.p`
 const Aboutimg = () => {
   return (
     <>
-
       <StaticImageWrapper>
         <SocialMediaIcons />
         <StaticImage
           src="../images/about-img.jpg"
           alt="Ryan Soeyadi Headshot"
           className={StaticImageStyle}
+          placeholder="blurred"
         />
         <ImageCaption>Photo by Jiyang Chen</ImageCaption>
       </StaticImageWrapper>
