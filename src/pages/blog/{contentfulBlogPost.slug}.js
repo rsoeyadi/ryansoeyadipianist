@@ -4,14 +4,7 @@ import Header from "../../components/Heading";
 import { graphql } from "gatsby";
 
 const BlogPost = ({ location, data }) => {
-  // {
-  //    data.allContentfulBlogPost.edges.map(
-  //     ({ node }, i) => {
-  //       console.log(node.slug === location.state.passSlug ? node : null);
-  //     }
-  //   );
-  // }
-  var node = null;
+  var node;
   for (let i = 0; i < data.allContentfulBlogPost.edges.length; i++) {
     if (
       data.allContentfulBlogPost.edges[i].node.slug === location.state.passSlug
