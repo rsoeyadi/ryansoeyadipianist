@@ -61,8 +61,10 @@ const HeadingButtonWrapper = styled.div`
   .date {
     display: inline-block;
   }
+  
   button {
-    margin-bottom: 5em;
+    margin-bottom: 6em;
+    margin-right: 1em;
     float: left;
 
     display: inline-block;
