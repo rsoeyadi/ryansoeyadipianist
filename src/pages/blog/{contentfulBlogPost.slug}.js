@@ -4,17 +4,37 @@ import Header from "../../components/Heading";
 import { graphql } from "gatsby";
 
 const BlogPost = ({ location, data }) => {
-
-  {
-    data.allContentfulBlogPost.edges.map(
-      ({ node }, i) => {
-        console.log(node.slug === location.state.passSlug ? node : null);
-      }
-    );
+  // {
+  //    data.allContentfulBlogPost.edges.map(
+  //     ({ node }, i) => {
+  //       console.log(node.slug === location.state.passSlug ? node : null);
+  //     }
+  //   );
+  // }
+  var node = null;
+  for (let i = 0; i < data.allContentfulBlogPost.edges.length; i++) {
+    if (
+      data.allContentfulBlogPost.edges[i].node.slug === location.state.passSlug
+    ) {
+      node = data.allContentfulBlogPost.edges[i].node;
+      break;
+    }
   }
 
-          return <Layout></Layout>;
+  console.log(node);
 
+  return (
+    <Layout>
+      <h1>{node.title}</h1>
+      <p>{node.slug}</p>
+      <h1>{node.title}</h1>
+      <p>{node.slug}</p>
+      <h1>{node.title}</h1>
+      <p>{node.slug}</p>
+      <h1>{node.title}</h1>
+      <p>{node.slug}</p>
+    </Layout>
+  );
 };
 
 export const query = graphql`
