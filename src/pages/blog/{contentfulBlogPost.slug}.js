@@ -4,7 +4,40 @@ import { graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import styled from "styled-components";
+import Heading from "../../components/Heading";
 
+const BlogPost = ({ location, data }) => {
+  var node;
+  for (let i = 0; i < data.allContentfulBlogPost.edges.length; i++) {
+    if (data.allContentfulBlogPost.edges[i].node.slug === location.state.passSlug) {
+      node = data.allContentfulBlogPost.edges[i].node;
+      break;
+    }
+  }
+
+  const image = getImage(node.image); // for my optimized Gatsby Image
+
+  return (
+    <Layout>
+      <BlogContent>
+        <Heading>{node.title}</Heading>
+        <p>{node.date}</p>
+        <GatsbyImage image={image} />
+        <p className="content">{renderRichText(node.content, options)}</p>
+      </BlogContent>
+    </Layout>
+  );
+};
+
+const BlogContent = styled.div`
+  margin-top: 10em;
+  text-align: center;
+  padding: 2em;
+  .content {
+    text-align: left;
+  }
+`;
 const options = {
   renderMark: {
     [MARKS.BOLD]: (text) => <b className="font-bold">{text}</b>,
@@ -24,27 +57,6 @@ const options = {
   },
 };
 
-const BlogPost = ({ location, data }) => {
-  var node;
-  for (let i = 0; i < data.allContentfulBlogPost.edges.length; i++) {
-    if (data.allContentfulBlogPost.edges[i].node.slug === location.state.passSlug) {
-      node = data.allContentfulBlogPost.edges[i].node;
-      break;
-    }
-  }
-
-    const image = getImage(node.image);
-
-  return (
-    <Layout>
-      <h1>{node.title}</h1>
-      <p>{node.date}</p>
-      <p>{renderRichText(node.content, options)}</p>
-      <GatsbyImage image={image} />
-    </Layout>
-  );
-};
-
 export const query = graphql`
   {
     allContentfulBlogPost(sort: { fields: [date], order: DESC }) {
@@ -59,7 +71,7 @@ export const query = graphql`
               fileName
               contentType
             }
-            gatsbyImageData(width: 200)
+            gatsbyImageData(width: 1024)
           }
           content {
             raw

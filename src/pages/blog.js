@@ -9,6 +9,7 @@ import { Link } from "gatsby";
 
 const BlogsWrapper = styled.div`
   margin-top: 8em;
+  padding: 1em;
   h1,
   p {
     margin: 0;
@@ -24,6 +25,13 @@ const BlogsWrapper = styled.div`
       0.8em;
   }
 
+  .listed-blog {
+    font-size: 20px;
+  }
+
+  .listed-blog-date {
+    font-size: 16px;
+  }
 
 `;
 
@@ -41,12 +49,12 @@ const blog = ({ data }) => {
 
           {data.allContentfulBlogPost.edges.map(({ node }, i) => (
             <Blog>
-              <h1>
-                <Link to={`${node.slug}`} state={{passSlug: `${node.slug}`}}>
+              <h1 className="listed-blog">
+                <Link to={`${node.slug}`} state={{ passSlug: `${node.slug}` }}>
                   {node.title}
                 </Link>
               </h1>
-              <p>{node.date}</p>
+              <p className="listed-blog-date">{node.date}</p>
             </Blog>
           ))}
         </BlogsWrapper>
