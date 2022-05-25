@@ -1,9 +1,9 @@
 import React from "react";
 import Layout from "../../components/Layout";
-import Header from "../../components/Heading";
 import { graphql } from "gatsby";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 const options = {
   renderMark: {
@@ -33,48 +33,42 @@ const BlogPost = ({ location, data }) => {
     }
   }
 
+    const image = getImage(node.image);
+
   return (
     <Layout>
       <h1>{node.title}</h1>
       <p>{node.date}</p>
-      <p>{node.slug}</p>
       <p>{renderRichText(node.content, options)}</p>
+      <GatsbyImage image={image} />
     </Layout>
   );
 };
 
 export const query = graphql`
   {
-    allContentfulBlogPost {
+    allContentfulBlogPost(sort: { fields: [date], order: DESC }) {
       edges {
         node {
           title
           slug
           date(formatString: "LL")
           image {
-            publicUrl
+            file {
+              url
+              fileName
+              contentType
+            }
+            gatsbyImageData(width: 200)
           }
           content {
             raw
-            
+            __typename
           }
         }
       }
     }
   }
 `;
-
-// {
-//     allContentfulBlogPost(
-//       filter: { id: { eq: "a01696e2-03c9-5e71-8f79-0a81212ff732" } }
-//     ) {
-//       edges {
-//         node {
-//           title
-//           id
-//         }
-//       }
-//     }
-//   }
 
 export default BlogPost;
