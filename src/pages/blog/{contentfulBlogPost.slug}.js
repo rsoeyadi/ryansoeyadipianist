@@ -6,15 +6,35 @@ import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Heading from "../../components/Heading";
+import { useState, useEffect } from "react";
 
 const BlogPost = ({ location, data }) => {
   var node;
+  const useIsSsr = () => {
+    // we always start off in "SSR mode", to ensure our initial browser render
+    // matches the SSR render
+    const [isSsr, setIsSsr] = useState(true);
+
+    useEffect(() => {
+      // `useEffect` never runs on the server, so we must be on the client if
+      // we hit this block
+      setIsSsr(false);
+    }, []);
+
+    return isSsr;
+  };
+
+  const isSsr = useIsSsr();
+  if (isSsr) return null;
   for (let i = 0; i < data.allContentfulBlogPost.edges.length; i++) {
-    if (data.allContentfulBlogPost.edges[i].node.slug === location.state.passSlug) {
+    if (
+      data.allContentfulBlogPost.edges[i].node.slug === location.state.passSlug
+    ) {
       node = data.allContentfulBlogPost.edges[i].node;
       break;
     }
   }
+ 
 
   const image = getImage(node.image); // for my optimized Gatsby Image
 

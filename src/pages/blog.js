@@ -5,6 +5,7 @@ import "../style/page.css";
 import styled from "styled-components";
 import Heading from "../components/Heading";
 import { Link } from "gatsby";
+import { useState, useEffect } from "react";
 
 const BlogsWrapper = styled.div`
   margin-top: 8em;
@@ -35,11 +36,27 @@ const BlogsWrapper = styled.div`
 `;
 
 const Blog = styled.div`
-    margin-top: 2em;
-    text-align: center;
-`
-const blog = ({ data }) => {
+  margin-top: 2em;
+  text-align: center;
+`;
 
+const BlogPage = ({ data }) => {
+  const useIsSsr = () => {
+    // we always start off in "SSR mode", to ensure our initial browser render
+    // matches the SSR render
+    const [isSsr, setIsSsr] = useState(true);
+
+    useEffect(() => {
+      // `useEffect` never runs on the server, so we must be on the client if
+      // we hit this block
+      setIsSsr(false);
+    }, []);
+
+    return isSsr;
+  };
+
+  const isSsr = useIsSsr();
+  if (isSsr) return null;
   return (
     <>
       <Layout>
@@ -82,5 +99,4 @@ export const query = graphql`
   }
 `;
 
-
-export default blog;
+export default BlogPage;
