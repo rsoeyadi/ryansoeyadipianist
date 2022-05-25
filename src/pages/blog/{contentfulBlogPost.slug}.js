@@ -9,6 +9,7 @@ import Heading from "../../components/Heading";
 import { useState, useEffect } from "react";
 import { navigate } from "gatsby";
 import '../../components/BlogButton.module.css'
+import "../../style/page.css";
 
 const BlogPost = ({ location, data }) => {
   var node;
@@ -70,7 +71,7 @@ const HeadingButtonWrapper = styled.div`
     cursor: pointer;
     border-radius: 8px;
     padding: 14px 16px 16px;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 1;
     transition: transform 200ms, background 200ms;

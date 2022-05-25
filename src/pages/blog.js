@@ -6,6 +6,7 @@ import styled from "styled-components";
 import Heading from "../components/Heading";
 import { Link } from "gatsby";
 import { useState, useEffect } from "react";
+import "../style/page.css";
 
 const BlogsWrapper = styled.div`
   margin-top: 8em;
