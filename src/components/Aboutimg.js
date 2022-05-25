@@ -14,7 +14,6 @@ const StaticImageWrapper = styled.div`
     -moz-animation: fadeIn 3.5s;
     -o-animation: fadeIn 3.5s;
     -ms-animation: fadeIn 3.5s;
-    border-radius: 50px;
   }
   @keyframes fadeIn {
     0% {

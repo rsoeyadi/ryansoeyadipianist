@@ -139,28 +139,22 @@ const Hamburger = () => {
       <MenuLinks nav={nav}>
         <ul>
           <li>
-            <Link to="/" activeStyle={{ textDecoration: "underline" }}>
+            <Link to="/" activeStyle={{ color: "grey" }}>
               About
             </Link>
           </li>
           <li>
-            <Link
-              to="../pages/404.js"
-              activeStyle={{ textDecoration: "underline" }}
-            >
+            <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
               Media
             </Link>
           </li>
           <li>
-            <Link to="/blog" activeStyle={{ textDecoration: "underline" }}>
+            <Link to="/blog" activeStyle={{ color: "grey" }}>
               Blog
             </Link>
           </li>
           <li>
-            <Link
-              to="../pages/404.js"
-              activeStyle={{ textDecoration: "underline" }}
-            >
+            <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
               Gallery
             </Link>
           </li>

@@ -5,6 +5,8 @@ import Layout from "../components/Layout";
 import "../style/page.css";
 import styled from "styled-components";
 import Heading from "../components/Heading";
+import { Link } from "gatsby";
+
 const BlogsWrapper = styled.div`
   margin-top: 8em;
   h1,
@@ -17,6 +19,12 @@ const BlogsWrapper = styled.div`
     text-align: center;
     display: block;
   }
+
+  p {
+      0.8em;
+  }
+
+
 `;
 
 const Blog = styled.div`
@@ -24,15 +32,20 @@ const Blog = styled.div`
     text-align: center;
 `
 const blog = ({ data }) => {
+
   return (
     <>
       <Layout>
         <BlogsWrapper>
-          <Heading className = "center">BLOGS</Heading>
+          <Heading className="center">BLOGS</Heading>
 
           {data.allContentfulBlogPost.edges.map(({ node }, i) => (
             <Blog>
-              <h1>{node.title}</h1>
+              <h1>
+                <Link to={`${node.slug}`} state={{passSlug: `${node.slug}`}}>
+                  {node.title}
+                </Link>
+              </h1>
               <p>{node.date}</p>
             </Blog>
           ))}
@@ -61,5 +74,6 @@ export const query = graphql`
     }
   }
 `;
+
 
 export default blog;
