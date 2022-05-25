@@ -1,5 +1,4 @@
 import React from "react";
-import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import "../style/page.css";
