@@ -7,6 +7,8 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import Heading from "../../components/Heading";
 import { useState, useEffect } from "react";
+import { navigate } from "gatsby";
+import '../../components/BlogButton.module.css'
 
 const BlogPost = ({ location, data }) => {
   var node;
@@ -34,15 +36,18 @@ const BlogPost = ({ location, data }) => {
       break;
     }
   }
- 
 
   const image = getImage(node.image); // for my optimized Gatsby Image
 
   return (
     <Layout>
       <BlogContent>
-        <Heading>{node.title}</Heading>
-        <p>{node.date}</p>
+        <HeadingButtonWrapper>
+          {" "}
+          <button onClick={() => navigate(-1)}>Back</button>
+          <Heading>{node.title}</Heading>
+          <p className="date">{node.date}</p>
+        </HeadingButtonWrapper>
         <GatsbyImage image={image} />
         <p className="content">{renderRichText(node.content, options)}</p>
       </BlogContent>
@@ -50,10 +55,42 @@ const BlogPost = ({ location, data }) => {
   );
 };
 
+const HeadingButtonWrapper = styled.div`
+
+  .date {
+    display: inline-block;
+  }
+  button {
+    margin-bottom: 5em;
+    float: left;
+
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 14px 16px 16px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1;
+    transition: transform 200ms, background 200ms;
+    background: transparent;
+    color: #000000;
+    box-shadow: 0 0 0 3px #000000 inset;
+    :hover {
+      transform: translateY(-2px);
+    }
+  }
+`;
+
 const BlogContent = styled.div`
-  margin-top: 10em;
+  margin-top: 8em;
   text-align: center;
   padding: 2em;
+
+  img {
+    margin-top: 1em;
+  }
   .content {
     text-align: left;
   }

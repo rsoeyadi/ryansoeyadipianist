@@ -8,7 +8,7 @@ const H1 = styled.h1`
   margin-bottom: 0;
 
   text-align: center;
-  color: rgba(255, 255, 255, 0.1);
+  color: rgba(100, 100, 100, 0.1);
   background: -webkit-gradient(
     linear,
     left top,
