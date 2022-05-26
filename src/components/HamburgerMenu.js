@@ -97,6 +97,15 @@ const MenuLinks = styled.nav`
     }
   }
 
+  button {
+    background: none;
+    color: inherit;
+    border: none;
+    padding: 0;
+    font: inherit;
+    cursor: pointer;
+    outline: inherit;
+  }
   @media only screen and (min-width: 1024px) {
     display: none;
   }
@@ -152,22 +161,22 @@ const Hamburger = () => {
         <ul>
           <li>
             <Link to="/" activeStyle={{ color: "grey" }}>
-              About
+              <button onClick={() => showNav(!nav)}>About</button>
             </Link>
           </li>
           <li>
             <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
-              Media
+              <button onClick={() => showNav(!nav)}>Media</button>
             </Link>
           </li>
           <li>
             <Link to="/blog" activeStyle={{ color: "grey" }}>
-              Blog
+              <button onClick={() => showNav(!nav)}>Blog</button>
             </Link>
           </li>
           <li>
             <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
-              Gallery
+              <button onClick={() => showNav(!nav)}>Gallery</button>
             </Link>
           </li>
           <li>
@@ -175,7 +184,7 @@ const Hamburger = () => {
               to="../pages/404.js"
               activeStyle={{ textDecoration: "underline" }}
             >
-              Contact
+              <button onClick={() => showNav(!nav)}>Contact</button>
             </Link>
           </li>
           <li>
