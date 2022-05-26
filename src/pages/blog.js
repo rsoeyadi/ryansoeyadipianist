@@ -88,9 +88,6 @@ export const query = graphql`
           title
           slug
           date(formatString: "LL")
-          image {
-            gatsbyImageData(width: 768)
-          }
         }
       }
     }
