@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import SocialMediaIcons from "../components/SocialMediaIcons";
-import RS from "../images/svg/rs.svg";
+import Rs from "../images/svg/rs.svg";
 
 const Global = createGlobalStyle`
   body {
@@ -155,7 +155,7 @@ const Hamburger = () => {
           <div />
           <div />
         </MenuIcon>
-        <RS />
+        <Rs />
       </MobileBar>
       <MenuLinks nav={nav}>
         <ul>
