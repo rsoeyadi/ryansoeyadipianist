@@ -45,23 +45,52 @@ const options = {
 const BlogPostWrapper = styled.div`
   margin: 8em 2em 1em;
 
+  
+    .button-23 {
+      
+        background-color: #ffffff;
+        border: 1px solid #222222;
+        border-radius: 8px;
+        box-sizing: border-box;
+        color: #222222;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 20px;
+        margin: 0 0 3em 0;
+        outline: none;
+        padding: 6px 12px;
+        position: relative;
+        text-align: center;
+        text-decoration: none;
+        touch-action: manipulation;
+        transition: box-shadow 0.2s, -ms-transform 0.1s, -webkit-transform 0.1s,
+            transform 0.1s;
+        user-select: none;
+        -webkit-user-select: none;
+        width: auto;
+        }
+    }
+
   @media only screen and (min-width: 768px) {
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
   }
-
 `;
 const BlogPost = (props) => {
   const image = getImage(props.data.contentfulBlogPost.image.gatsbyImageData);
   return (
     <Layout>
       <BlogPostWrapper>
-        <Link to="/blog/">Back</Link>{" "}
+        <Link to="/blog/">
+          <button className="button-23">Back</button>
+        </Link>
         <Heading>{props.data.contentfulBlogPost.title}</Heading>
         <div className="content">
-          <GatsbyImage image={image} style={{ maxWidth: "512px" }} />
+          <GatsbyImage image={image} style={{ maxWidth: "512px", marginTop: "2em" }} />
           <div>
             {renderRichText(props.data.contentfulBlogPost.content, options)}
           </div>
