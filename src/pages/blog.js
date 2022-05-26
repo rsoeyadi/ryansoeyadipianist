@@ -67,7 +67,7 @@ const BlogPage = ({ data }) => {
           {data.allContentfulBlogPost.edges.map(({ node }, i) => (
             <Blog>
               <h1 className="listed-blog">
-                <Link to={`${node.slug}`} state={{ passSlug: `${node.slug}` }}>
+                <Link to={`${node.slug}`}>
                   {node.title}
                 </Link>
               </h1>
