@@ -19,10 +19,12 @@ const SocialMediaIcons = () => {
   return (
     <IconsWrapper>
       <a href="https://www.youtube.com/c/RyanSoeyadi" target="__blank">
-        <YouTube />
+        youtube
+        {/* <YouTube /> */}
       </a>
       <a href="https://www.instagram.com/ryansoeyadi/?hl=en" target="__blank">
-        <Instagram />
+        instagram
+        {/* <Instagram /> */}
       </a>
     </IconsWrapper>
   );
