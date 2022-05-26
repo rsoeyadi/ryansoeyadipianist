@@ -81,18 +81,15 @@ const BlogPage = ({ data }) => {
 };
 
 export const query = graphql`
-  {
-    allContentfulBlogPost(sort: { fields: [date], order: DESC }) {
+  query MyQuery {
+    allContentfulBlogPost(sort: { fields: date, order: DESC }) {
       edges {
         node {
           title
           slug
           date(formatString: "LL")
           image {
-            publicUrl
-          }
-          content {
-            raw
+            gatsbyImageData(width: 768)
           }
         }
       }
