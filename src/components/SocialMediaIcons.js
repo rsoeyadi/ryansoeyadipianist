@@ -12,14 +12,15 @@ const IconsWrapper = styled.div`
   svg {
     cursor: pointer;
   }
+
 `;
 const SocialMediaIcons = () => {
   return (
     <IconsWrapper>
-      <a href="https://www.youtube.com/c/RyanSoeyadi" target="__blank">
+      <a href="https://www.youtube.com/c/RyanSoeyadi" >
         <YouTube />
       </a>
-      <a href="https://www.instagram.com/ryansoeyadi/?hl=en" target="__blank">
+      <a href="https://www.instagram.com/ryansoeyadi/?hl=en" >
         <Instagram />
       </a>
     </IconsWrapper>
