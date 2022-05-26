@@ -7,6 +7,7 @@ import "../style/page.css";
 const index = () => {
   return (
     <>
+
       <Layout>
         <Aboutimg />
 

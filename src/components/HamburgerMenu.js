@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import SocialMediaIcons from "../components/SocialMediaIcons";
+import RS from "../images/svg/rs.svg";
 
 const Global = createGlobalStyle`
   body {
@@ -16,8 +17,10 @@ const MenuIcon = styled.button`
   left: 2rem;
   margin-top: 2em;
   margin-left: 2em;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
+ 
+
   justify-content: space-around;
   height: 2.5rem;
   background: transparent;
@@ -26,6 +29,7 @@ const MenuIcon = styled.button`
   z-index: 9999;
 
   div {
+    
     width: 2.37rem;
     height: 0.24rem;
     background: black;
@@ -112,6 +116,13 @@ const MobileBar = styled.div`
   left: 0;
   z-index: 20000;
 
+  svg {
+      width: 74px;
+      float: right;
+      height: 74px;
+      margin: 1em 1em 0 0;
+  }
+
   @media only screen and (min-width: 1024px) {
     display: none;
   }
@@ -135,6 +146,7 @@ const Hamburger = () => {
           <div />
           <div />
         </MenuIcon>
+        <RS />
       </MobileBar>
       <MenuLinks nav={nav}>
         <ul>
