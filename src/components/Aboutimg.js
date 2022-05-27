@@ -5,60 +5,9 @@ import styled from "styled-components";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 const StaticImageWrapper = styled.div`
   padding: 1.5em 1.5em 0 1.5em;
-  margin-top: 10em;
   max-width: 768px;
 
-  img {
-    animation: fadeIn 3.5s;
-    -webkit-animation: fadeIn 3.5s;
-    -moz-animation: fadeIn 3.5s;
-    -o-animation: fadeIn 3.5s;
-    -ms-animation: fadeIn 3.5s;
-  }
-  @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-moz-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-webkit-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-o-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-
-  @-ms-keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+  
 `;
 
 const ImageCaption = styled.p`

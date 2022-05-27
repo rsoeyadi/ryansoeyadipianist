@@ -155,7 +155,9 @@ const Hamburger = () => {
           <div />
           <div />
         </MenuIcon>
-        <Rs />
+        <Link to="/">
+          <Rs />
+        </Link>
       </MobileBar>
       <MenuLinks nav={nav}>
         <ul>
