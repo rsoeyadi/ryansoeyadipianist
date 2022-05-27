@@ -12,8 +12,9 @@ const StyledTitle = styled.div`
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
 
-  
-  
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+
   @keyframes scale {
     100% {
       transform: scale(1);
@@ -27,19 +28,21 @@ const StyledTitle = styled.div`
     font-size: 30px;
   }
 
-  span:nth-child(1) {
-    
+  span.title:nth-child(1) {
     text-align: right;
     animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(2) {
+  span.title:nth-child(2) {
     animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span:nth-child(3) {
+  .subtitle {
     font-family: "Great Vibes", cursive;
-    animation: fade-in 0.8s 1.7s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span.subtitle {
+    animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
   @keyframes fade-in {
@@ -54,12 +57,11 @@ const index = () => {
     <>
       <Layout>
         <StyledTitle>
-
-          
-            <span>Ryan</span>
-            <span>Soeyadi</span>
-        
-          <span>Pianist</span>
+          <div>
+            <span className="title">Ryan&nbsp;</span>
+            <span className="title">Soeyadi</span>
+          </div>
+          <span className="subtitle">Pianist</span>
         </StyledTitle>
         <Aboutimg />
 
