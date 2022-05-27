@@ -7,7 +7,6 @@ import styled, { createGlobalStyle } from "styled-components";
 
 const StyledTitle = styled.div`
   margin-top: 8em;
-  max-width: 40ch;
   text-align: center;
   transform: scale(0.94);
   animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
