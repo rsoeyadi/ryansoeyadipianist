@@ -56,6 +56,16 @@ const StyledTitle = styled.div`
     }
   }
 `;
+
+const MainContent = styled.div`
+
+  @media only screen and (min-width: 1024px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1125px;
+    margin: 0 auto 0;
+  }
+`;
 const index = () => {
   return (
     <>
@@ -67,9 +77,11 @@ const index = () => {
           </div>
           <span className="subtitle">Pianist</span>
         </StyledTitle>
-        <Aboutimg />
+        <MainContent>
+          <Aboutimg />
 
-        <BiographySection />
+          <BiographySection />
+        </MainContent>
       </Layout>
     </>
   );

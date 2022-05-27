@@ -17,7 +17,7 @@ export const query = graphql`
         raw
       }
       image {
-        gatsbyImageData(width: 1000)
+        gatsbyImageData(width: 1024)
       }
     }
   }
@@ -73,12 +73,17 @@ const BlogPostWrapper = styled.div`
         }
     }
 
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 1024px) {
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
+      max-width: 1125px;
+      margin: 0 auto 0;
+      grid-column-gap: 1.5em;
     }
   }
+
+   
 `;
 const BlogPost = (props) => {
   const image = getImage(props.data.contentfulBlogPost.image.gatsbyImageData);
@@ -90,7 +95,7 @@ const BlogPost = (props) => {
         </Link>
         <Heading>{props.data.contentfulBlogPost.title}</Heading>
         <div className="content">
-          <GatsbyImage image={image} style={{ maxWidth: "512px", marginTop: "2em" }} />
+          <GatsbyImage image={image} style={{ maxWidth: "1024px", marginTop: "2em" }} />
           <div>
             {renderRichText(props.data.contentfulBlogPost.content, options)}
           </div>
