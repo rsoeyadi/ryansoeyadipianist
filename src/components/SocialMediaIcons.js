@@ -13,6 +13,28 @@ const IconsWrapper = styled.div`
     cursor: pointer;
   }
 
+  a {
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+  }
+  a:hover {
+    animation-name: bounce;
+    animation-timing-function: ease;
+  }
+  @keyframes bounce {
+    0% {
+      transform: translateY(0);
+    }
+    30% {
+      transform: translateY(-10px);
+    }
+    50% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 `;
 const SocialMediaIcons = () => {
   return (
