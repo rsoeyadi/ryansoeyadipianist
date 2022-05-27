@@ -14,6 +14,7 @@ const StyledTitle = styled.div`
 
   display: grid;
   grid-template-rows: 1fr 1fr;
+  grid-row-gap: 1em;
 
   @keyframes scale {
     100% {
@@ -28,6 +29,9 @@ const StyledTitle = styled.div`
     font-size: 30px;
   }
 
+  .title {
+    font-size: 40px;
+  }
   span.title:nth-child(1) {
     text-align: right;
     animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
@@ -39,10 +43,11 @@ const StyledTitle = styled.div`
 
   .subtitle {
     font-family: "Great Vibes", cursive;
+    font-size: 32px;
   }
 
   span.subtitle {
-    animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
+    animation: fade-in 0.8s 1.75s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
   @keyframes fade-in {
