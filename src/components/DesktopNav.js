@@ -27,6 +27,11 @@ const Navbar = styled.div`
     padding: 50px 5% 0 5%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
+
+  @media only screen and (min-width: 1024px), (max-height: 1175px) {
+   
+    padding: 50px 0 0 5%;
+  }
 `;
 
 const MenuLinks = styled.div`
