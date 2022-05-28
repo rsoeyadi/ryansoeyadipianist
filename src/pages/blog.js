@@ -34,8 +34,7 @@ const BlogsWrapper = styled.div`
     font-size: 16px;
   }
  @media only screen and (min-width: 1024px) {
-    margin-top: 3em;
-    margin-bottom: 8em;
+    margin: 0 auto 5%;
   }
 `;
 

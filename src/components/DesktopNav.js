@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, createContext } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import SocialMediaIcons from "../components/SocialMediaIcons";
@@ -25,12 +25,29 @@ const Navbar = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 10% 0 5%;
+    padding: 50px 5% 0 5%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
 `;
 
-const MenuLinks = styled.div``;
+const MenuLinks = styled.div`
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  li {
+    padding: 10px 22px;
+    text-align: center;
+    display: block;
+    float: left;
+    font-size: 1.1em;
+  }
+
+  a {
+      color: black;
+  }
+`;
 const DesktopTitle = styled.div`
   margin-top: 2em;
   text-align: left;
@@ -47,7 +64,7 @@ const DesktopTitle = styled.div`
 
   span {
     display: inline-block;
-    font-size: 30px;
+    font-size: 25px;
   }
 
   .load-in-1 {
@@ -57,7 +74,7 @@ const DesktopTitle = styled.div`
   }
 
   .title {
-    font-size: 50px;
+    font-size: 40px;
   }
 
   span.title:nth-child(1) {

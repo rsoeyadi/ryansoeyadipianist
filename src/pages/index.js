@@ -10,7 +10,7 @@ const MainContent = styled.div`
   @media only screen and (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin: 0 auto 0;
+    margin: 0 auto 5%;
     text-align: left;
     max-width: 1400px;
 

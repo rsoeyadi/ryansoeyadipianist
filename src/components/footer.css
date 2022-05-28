@@ -21,6 +21,7 @@ main {
     margin: 0 auto;
     padding: 1em;
     grid-column-gap: 2em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
 
   footer:first-child {
