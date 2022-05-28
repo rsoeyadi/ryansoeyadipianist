@@ -20,7 +20,7 @@ const Navbar = styled.div`
     display: none;
   }
 
-  @media only screen and (min-width: 1024px) {
+  @media only screen and (min-width: 1024px), (max-height: 430px) {
     display: block;
     display: flex;
     justify-content: space-between;
@@ -28,6 +28,7 @@ const Navbar = styled.div`
     padding: 50px 5% 0 5%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
+
 `;
 
 const MenuLinks = styled.div`
@@ -37,7 +38,7 @@ const MenuLinks = styled.div`
     list-style: none;
   }
   li {
-    padding: 10px 22px;
+    padding: 10px 17px;
     text-align: center;
     display: block;
     float: left;
@@ -92,6 +93,13 @@ const DesktopTitle = styled.div`
     font-family: "Great Vibes", cursive;
     font-size: 32px;
   }
+  @media only screen and (max-height: 430px) {
+    .subtitle {
+      margin-top: 0;
+      font-family: "Great Vibes", cursive;
+      font-size: 26px;
+    }
+  }
 
   span.subtitle {
     grid-column-start: 2;
@@ -112,6 +120,12 @@ const DesktopTitle = styled.div`
 
   svg {
     width: 80px;
+  }
+
+  @media only screen and (max-height: 430px) {
+    svg {
+      width: 60px;
+    }
   }
 `;
 
