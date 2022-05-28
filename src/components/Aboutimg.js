@@ -5,8 +5,11 @@ import styled from "styled-components";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 const StaticImageWrapper = styled.div`
   padding: 1.5em 1.5em 0 1.5em;
-  max-width: 768px;
+  max-width: 1024px;
 
+  svg {
+    display: none;
+  }
   
 `;
 

@@ -55,15 +55,20 @@ const StyledTitle = styled.div`
       filter: blur(0);
     }
   }
+
+  @media only screen and (min-width: 1024px) {
+    margin: 0 auto 0;
+    text-align: left;
+    padding: 1.5em 1.5em 0 1.5em
+  }
 `;
 
 const MainContent = styled.div`
-
   @media only screen and (min-width: 1024px) {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    max-width: 1125px;
     margin: 0 auto 0;
+    text-align: left;
   }
 `;
 const index = () => {
