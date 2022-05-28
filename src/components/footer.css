@@ -24,11 +24,10 @@ main {
   }
 
   footer:first-child {
-      grid-column-start: 0;
+    grid-column-start: 0;
   }
 
   footer div svg {
-      width: 90px;
+    width: 90px;
   }
-  
 }

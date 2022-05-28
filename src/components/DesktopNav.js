@@ -12,7 +12,7 @@ const Global = createGlobalStyle`
     overflow-x: hidden;
     height: 100%;
   }
-   
+
 `;
 
 const Navbar = styled.div`
@@ -26,8 +26,6 @@ const Navbar = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 50px 10% 0 20px;
-
-   
   }
 `;
 
@@ -35,9 +33,7 @@ const MenuLinks = styled.div``;
 const DesktopTitle = styled.div`
   margin-top: 2em;
   text-align: left;
-  transform: scale(0.94);
-  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
-
+  
   display: grid;
   grid-template-rows: 1fr 0.5fr;
   grid-template-columns: 0.5fr 1fr;
@@ -51,23 +47,27 @@ const DesktopTitle = styled.div`
 
   span {
     display: inline-block;
+    font-size: 30px;
+  }
+
+  .load-in-1 {
     opacity: 0;
     filter: blur(4px);
-    font-size: 30px;
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
   .title {
     font-size: 50px;
   }
 
-
   span.title:nth-child(1) {
     text-align: right;
-    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
-  span.title:nth-child(2) {
-    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  .load-in-2 {
+    opacity: 0;
+    filter: blur(4px);
+    animation: fade-in 1s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
   .subtitle {
@@ -77,8 +77,13 @@ const DesktopTitle = styled.div`
   }
 
   span.subtitle {
-    animation: fade-in 0.8s 1.75s forwards cubic-bezier(0.11, 0, 0.5, 0);
     grid-column-start: 2;
+  }
+
+  .load-in-3 {
+    opacity: 0;
+    filter: blur(4px);
+    animation: fade-in 0.8s 1.6s forwards cubic-bezier(0.11, 0, 0.5, 0);
   }
 
   @keyframes fade-in {
@@ -89,11 +94,9 @@ const DesktopTitle = styled.div`
   }
 
   svg {
-      width: 100px;
-      
+    width: 100px;
   }
-
-  `;
+`;
 const DesktopNav = () => {
   return (
     <div>
@@ -105,10 +108,10 @@ const DesktopNav = () => {
             <Rs />
           </Link>
           <div>
-            <span className="title">Ryan&nbsp;</span>
-            <span className="title">Soeyadi</span>
+            <span className="title load-in-1">Ryan&nbsp;</span>
+            <span className="title load-in-2">Soeyadi</span>
           </div>
-          <span className="subtitle">Pianist</span>
+          <span className="subtitle load-in-3">Pianist</span>
         </DesktopTitle>
         <MenuLinks>
           <ul>
