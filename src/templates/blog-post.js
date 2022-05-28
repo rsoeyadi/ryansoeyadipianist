@@ -45,7 +45,9 @@ const options = {
 const BlogPostWrapper = styled.div`
   margin: 8em 2em 1em;
 
-  
+   @media only screen and (min-width: 1024px) {
+     margin: 0 2em 8em;
+  }
     .button-23 {
       
         background-color: #ffffff;

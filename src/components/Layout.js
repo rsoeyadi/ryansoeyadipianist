@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import HamburgerMenu from './HamburgerMenu'
+import DesktopNav from './DesktopNav'
 import styled from "styled-components";
 import GatsbyLogo from "../images/svg/gatsby.svg";
-
 import './footer.css'
 const Layout = (props) => {
   const children = props.children;
@@ -13,10 +13,13 @@ const Layout = (props) => {
     white-space: pre;
 
     font-size: 10px;
+
+   
   `;
   return (
     <div className="flexThisBox">
-      <HamburgerMenu />
+      <HamburgerMenu className="mobile"/>
+      <DesktopNav />
       <main>{children}</main>
       <footer>
         <div>

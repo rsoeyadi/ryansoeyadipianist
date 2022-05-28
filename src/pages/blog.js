@@ -33,7 +33,10 @@ const BlogsWrapper = styled.div`
   .listed-blog-date {
     font-size: 16px;
   }
-
+ @media only screen and (min-width: 1024px) {
+    margin-top: 0;
+    margin-bottom: 8em;
+  }
 `;
 
 const Blog = styled.div`
