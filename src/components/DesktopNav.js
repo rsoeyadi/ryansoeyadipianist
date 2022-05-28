@@ -25,7 +25,8 @@ const Navbar = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 10% 0 20px;
+    padding: 50px 10% 0 5%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
 `;
 
@@ -33,7 +34,6 @@ const MenuLinks = styled.div``;
 const DesktopTitle = styled.div`
   margin-top: 2em;
   text-align: left;
-  
   display: grid;
   grid-template-rows: 1fr 0.5fr;
   grid-template-columns: 0.5fr 1fr;
@@ -94,10 +94,15 @@ const DesktopTitle = styled.div`
   }
 
   svg {
-    width: 100px;
+    width: 90px;
   }
 `;
+
 const DesktopNav = () => {
+
+  const [done, setDone] = useState(0);
+
+  
   return (
     <div>
       <Global />
@@ -108,10 +113,25 @@ const DesktopNav = () => {
             <Rs />
           </Link>
           <div>
-            <span className="title load-in-1">Ryan&nbsp;</span>
-            <span className="title load-in-2">Soeyadi</span>
+            <span
+              className={`title ${done ? "" : "load-in-1"}`}
+              onAnimationEnd={() => console.log(done)}
+            >
+              Ryan&nbsp;
+            </span>
+            <span
+              className={`title ${done ? "" : "load-in-2"}`}
+              onAnimationEnd={() => console.log(done)}
+            >
+              Soeyadi
+            </span>
           </div>
-          <span className="subtitle load-in-3">Pianist</span>
+          <span
+            className={`subtitle ${done ? "" : "load-in-3"}`}
+            onAnimationEnd={() => console.log(done)}
+          >
+            Pianist
+          </span>
         </DesktopTitle>
         <MenuLinks>
           <ul>

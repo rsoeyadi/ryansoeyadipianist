@@ -14,7 +14,6 @@ const Layout = (props) => {
 
     font-size: 10px;
 
-   
   `;
   return (
     <div className="flexThisBox">

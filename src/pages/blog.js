@@ -34,7 +34,7 @@ const BlogsWrapper = styled.div`
     font-size: 16px;
   }
  @media only screen and (min-width: 1024px) {
-    margin-top: 0;
+    margin-top: 3em;
     margin-bottom: 8em;
   }
 `;
@@ -44,7 +44,7 @@ const Blog = styled.div`
   text-align: center;
 `;
 
-const BlogPage = ({ data }) => {
+const BlogPage = ({ data, location }) => {
   const useIsSsr = () => {
     // we always start off in "SSR mode", to ensure our initial browser render
     // matches the SSR render

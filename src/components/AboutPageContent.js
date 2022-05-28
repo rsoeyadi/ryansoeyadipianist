@@ -7,7 +7,6 @@ import StyledTitle from './MobileTitle'
 const StaticImageWrapper = styled.div`
   padding: 1.5em 1.5em 0 1.5em;
   max-width: 1024px;
-
   @media only screen and (min-width: 1024px) {
     svg {
       display: none;
@@ -22,7 +21,7 @@ const ImageCaption = styled.p`
 `;
 
 const Wrapper = styled.div`
- 
+  margin-top: 5em;
 `;
 const AboutPageContent = () => {
   return (

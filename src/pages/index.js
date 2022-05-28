@@ -12,10 +12,11 @@ const MainContent = styled.div`
     grid-template-columns: 1fr 1fr;
     margin: 0 auto 0;
     text-align: left;
+    max-width: 1400px;
 
-   .mobile {
-     display: none;
-   }
+    .mobile {
+      display: none;
+    }
   }
 `;
 const Wrapper = styled.div`

@@ -46,7 +46,7 @@ const BlogPostWrapper = styled.div`
   margin: 8em 2em 1em;
 
    @media only screen and (min-width: 1024px) {
-     margin: 0 2em 8em;
+     margin: 3em 2em 8em;
   }
     .button-23 {
       
