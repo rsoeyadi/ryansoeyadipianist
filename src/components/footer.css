@@ -19,7 +19,7 @@ main {
   footer {
     grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    padding: 1em;
+    padding: 1.5em;
     grid-column-gap: 2em;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }

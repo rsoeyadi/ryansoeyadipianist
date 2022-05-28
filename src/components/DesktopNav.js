@@ -111,7 +111,7 @@ const DesktopTitle = styled.div`
   }
 
   svg {
-    width: 90px;
+    width: 80px;
   }
 `;
 
