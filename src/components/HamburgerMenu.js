@@ -172,6 +172,11 @@ const Hamburger = () => {
             </Link>
           </li>
           <li>
+            <Link to="/events" activeStyle={{ color: "grey" }}>
+              <button onClick={() => showNav(!nav)}>Events</button>
+            </Link>
+          </li>
+          <li>
             <Link to="/blog" activeStyle={{ color: "grey" }}>
               <button onClick={() => showNav(!nav)}>Blog</button>
             </Link>

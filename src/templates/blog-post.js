@@ -4,9 +4,10 @@ import Layout from "../components/Layout";
 import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
-import styled, { createGlobalStyle } from "styled-components";
+import styled from "styled-components";
 import Heading from "../components/Heading";
-
+import SHeading from "../components/SHeading"
+ 
 export const query = graphql`
   query ($slug: String!) {
     contentfulBlogPost(slug: { eq: $slug }) {
@@ -49,7 +50,6 @@ const BlogPostWrapper = styled.div`
      margin: 3em 2em 8em;
   }
     .button-23 {
-      
         background-color: #ffffff;
         border: 1px solid #222222;
         border-radius: 8px;
@@ -88,6 +88,10 @@ const BlogPostWrapper = styled.div`
       margin-top: 0 !important;
     }
 
+    .button-23 {
+      margin: 0;
+    }
+
   
   }
 
@@ -102,8 +106,14 @@ const BlogPost = (props) => {
           <button className="button-23">Back</button>
         </Link>
         <Heading>{props.data.contentfulBlogPost.title}</Heading>
+        <SHeading>
+          {props.data.contentfulBlogPost.date}
+        </SHeading>
         <div className="content">
-          <GatsbyImage image={image} style={{ maxWidth: "1024px", marginTop: "2em" }} />
+          <GatsbyImage
+            image={image}
+            style={{ maxWidth: "1024px", marginTop: "2em" }}
+          />
           <div>
             {renderRichText(props.data.contentfulBlogPost.content, options)}
           </div>

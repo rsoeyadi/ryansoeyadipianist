@@ -117,9 +117,6 @@ const DesktopTitle = styled.div`
 
 const DesktopNav = () => {
 
-  const [done, setDone] = useState(0);
-
-  
   return (
     <div>
       <Global />
@@ -130,25 +127,10 @@ const DesktopNav = () => {
             <Rs />
           </Link>
           <div>
-            <span
-              className={`title ${done ? "" : "load-in-1"}`}
-              onAnimationEnd={() => console.log(done)}
-            >
-              Ryan&nbsp;
-            </span>
-            <span
-              className={`title ${done ? "" : "load-in-2"}`}
-              onAnimationEnd={() => console.log(done)}
-            >
-              Soeyadi
-            </span>
+            <span className="title load-in-1">Ryan&nbsp;</span>
+            <span className="title load-in-2">Soeyadi</span>
           </div>
-          <span
-            className={`subtitle ${done ? "" : "load-in-3"}`}
-            onAnimationEnd={() => console.log(done)}
-          >
-            Pianist
-          </span>
+          <span className="subtitle load-in-3">Pianist</span>
         </DesktopTitle>
         <MenuLinks>
           <ul>
@@ -161,10 +143,15 @@ const DesktopNav = () => {
               <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
                 Media
               </Link>
-            </li>
+            </li>{" "}
             <li>
               <Link to="/blog" activeStyle={{ color: "grey" }}>
                 Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/events" activeStyle={{ color: "grey" }}>
+                Events
               </Link>
             </li>
             <li>
