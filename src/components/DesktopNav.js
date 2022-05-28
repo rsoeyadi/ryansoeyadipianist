@@ -21,7 +21,6 @@ const Navbar = styled.div`
   }
 
   @media only screen and (min-width: 1024px), (max-height: 430px) {
-    display: block;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -55,6 +54,7 @@ const DesktopTitle = styled.div`
   grid-template-rows: 1fr 0.5fr;
   grid-template-columns: 0.5fr 1fr;
   grid-row-gap: 1em;
+  grid-column-gap: 1em;
 
   @keyframes scale {
     100% {
@@ -91,16 +91,22 @@ const DesktopTitle = styled.div`
     margin-top: -50px;
     font-family: "Great Vibes", cursive;
     font-size: 32px;
+    grid-column-start: 2;
   }
-  
+
   @media only screen and (max-height: 430px) {
     .subtitle {
       margin-top: 0;
+
     }
+
+}
+    
 
     @media only screen and (max-height: 430px) and (min-width: 1000px) {
     .subtitle {
-      margin-top: -20px;
+      margin-top: -30px;
+      
     }
   }
 
@@ -127,7 +133,7 @@ const DesktopTitle = styled.div`
 
   @media only screen and (max-height: 430px) {
     svg {
-      width: 60px;
+      width: 70px;
     }
   }
 `;
