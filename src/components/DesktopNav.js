@@ -28,7 +28,6 @@ const Navbar = styled.div`
     padding: 50px 5% 0 5%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
-
 `;
 
 const MenuLinks = styled.div`
@@ -46,7 +45,7 @@ const MenuLinks = styled.div`
   }
 
   a {
-      color: black;
+    color: black;
   }
 `;
 const DesktopTitle = styled.div`
@@ -93,11 +92,15 @@ const DesktopTitle = styled.div`
     font-family: "Great Vibes", cursive;
     font-size: 32px;
   }
+  
   @media only screen and (max-height: 430px) {
     .subtitle {
       margin-top: 0;
-      font-family: "Great Vibes", cursive;
-      font-size: 26px;
+    }
+
+    @media only screen and (max-height: 430px) and (min-width: 1000px) {
+    .subtitle {
+      margin-top: -20px;
     }
   }
 
@@ -130,7 +133,6 @@ const DesktopTitle = styled.div`
 `;
 
 const DesktopNav = () => {
-
   return (
     <div>
       <Global />
