@@ -11,6 +11,14 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+
+      allContentfulEvent(sort: { fields: date, order: DESC }) {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
     }
   `);
   response.data.allContentfulBlogPost.edges.forEach((edge) => {
@@ -22,4 +30,15 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     });
   });
+
+  response.data.allContentfulEvent.edges.forEach((edge) => {
+    createPage({
+      path: `/events/${edge.node.slug}`,
+      component: path.resolve("./src/templates/event-post.js"),
+      context: {
+        slug: edge.node.slug,
+      },
+    });
+  });
 };
+

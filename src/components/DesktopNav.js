@@ -3,7 +3,6 @@ import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import Rs from "../images/svg/rs.svg";
-import StyledTitle from "./MobileTitle";
 
 const Global = createGlobalStyle`
   body {
@@ -29,7 +28,6 @@ const Navbar = styled.div`
   }
 
   @media only screen and (min-width: 1024px), (max-height: 1175px) {
-   
     padding: 50px 0 0 5%;
   }
 `;
@@ -102,16 +100,12 @@ const DesktopTitle = styled.div`
   @media only screen and (max-height: 430px) {
     .subtitle {
       margin-top: 0;
-
     }
+  }
 
-}
-    
-
-    @media only screen and (max-height: 430px) and (min-width: 1000px) {
+  @media only screen and (max-height: 430px) and (min-width: 1000px) {
     .subtitle {
       margin-top: -30px;
-      
     }
   }
 

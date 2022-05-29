@@ -4,7 +4,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `gatsby site`,
+    title: `Ryan Soeyadi | Pianist`,
     siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
