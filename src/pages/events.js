@@ -30,10 +30,11 @@ const EventsWrapper = styled.div`
   }
 
   .listed-event-date {
-    font-size: 16px;
+    
   }
  @media only screen and (min-width: 1024px) {
     margin: 2% auto 3%;
+    
   }
 `;
 
@@ -42,10 +43,11 @@ const EventWrapper = styled.div`
   padding: 0 1em 1em;
   margin: 1em auto 4em;
   max-width: 420px;
-
   h1,
   a {
-    margin: 0;
+    color: black;
+    display: inline-block;
+    text-align: center;
   }
   img {
     max-width: 100%;
@@ -64,17 +66,48 @@ const EventWrapper = styled.div`
     text-align: center;
     text-transform: uppercase;
   }
+
+  .listed-event {
+    text-decoration: none;
+    position: relative;
+    color: #069;
+
+    &:after {
+      content: "";
+      height: 1.8px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0%;
+      background: #069;
+      transition: 0.3s;
+    }
+
+    &:hover:after {
+      width: 100%;
+    }
+
+    &.block {
+      display: block;
+      padding: 0.5em;
+
+      &:hover {
+        background: #eee;
+      }
+    }
+  }
 `;
 const EventsPage = ({ data, location, props }) => {
   console.log(props);
   return (
-    <EventsWrapper>
+    <>
       <Layout>
-        <div>
+        <EventsWrapper>
           <Heading className="center">Events</Heading>
           {data.allContentfulEvent.edges.map(({ node }, i) => (
             <EventWrapper>
               <Link to={`${node.slug}`}>
+                  
                 <h1 className="listed-event">{node.title}</h1>
 
                 <GatsbyImage
@@ -85,9 +118,9 @@ const EventsPage = ({ data, location, props }) => {
               <p className="listed-event-date">{node.date}</p>
             </EventWrapper>
           ))}
-        </div>
+        </EventsWrapper>
       </Layout>
-    </EventsWrapper>
+    </>
   );
 };
 
