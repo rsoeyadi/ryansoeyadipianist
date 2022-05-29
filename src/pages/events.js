@@ -43,6 +43,7 @@ const EventWrapper = styled.div`
   padding: 0 1em 1em;
   margin: 1em auto 4em;
   max-width: 420px;
+
   h1,
   a {
     color: black;
@@ -86,9 +87,13 @@ const EventWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 100%;
+  height: 100%;
+  display: inline-block;
   position: relative;
 
+
   .listed-event-date {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     font-size: 16px;
     position: absolute;
 
@@ -98,8 +103,8 @@ const ImageWrapper = styled.div`
     word-spacing: 50px;
     text-align: center;
     text-transform: uppercase;
-    top: 50px;
-    right: 30px;
+    bottom: 20px;
+    left: 15px;
     background: white;
   }
 `;
