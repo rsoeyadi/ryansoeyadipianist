@@ -53,21 +53,6 @@ const EventWrapper = styled.div`
     max-width: 100%;
   }
 
-  .listed-event-date {
-    font-size: 16px;
-    position: absolute;
-
-    line-height: 1.67em;
-    width: 60px;
-    height: 60px;
-    word-spacing: 50px;
-    text-align: center;
-    text-transform: uppercase;
-    top: 90px;
-    right: 30px;
-    background: white;
-  }
-
   .listed-event {
     text-decoration: none;
     position: relative;
@@ -98,6 +83,26 @@ const EventWrapper = styled.div`
     }
   }
 `;
+
+const ImageWrapper = styled.div`
+  width: 100%;
+  position: relative;
+
+  .listed-event-date {
+    font-size: 16px;
+    position: absolute;
+
+    line-height: 1.67em;
+    width: 60px;
+    height: 60px;
+    word-spacing: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    top: 50px;
+    right: 30px;
+    background: white;
+  }
+`;
 const EventsPage = ({ data, location, props }) => {
   console.log(props);
   return (
@@ -109,11 +114,13 @@ const EventsPage = ({ data, location, props }) => {
             <EventWrapper>
               <Link to={`${node.slug}`}>
                 <h1 className="listed-event">{node.title}</h1>
-                <GatsbyImage
-                  image={getImage(node.image.gatsbyImageData)}
-                  style={{ maxWidth: "1024px", marginTop: "2em" }}
-                />
+                <ImageWrapper>
+                  <GatsbyImage
+                    image={getImage(node.image.gatsbyImageData)}
+                    style={{ maxWidth: "1024px", marginTop: "2em" }}
+                  />
                   <p className="listed-event-date">{node.date}</p>
+                </ImageWrapper>
               </Link>
             </EventWrapper>
           ))}
