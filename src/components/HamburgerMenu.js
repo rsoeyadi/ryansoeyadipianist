@@ -167,7 +167,7 @@ const Hamburger = () => {
             </Link>
           </li>
           <li>
-            <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
+            <Link to="/media" activeStyle={{ color: "grey" }}>
               <button onClick={() => showNav(!nav)}>Media</button>
             </Link>
           </li>

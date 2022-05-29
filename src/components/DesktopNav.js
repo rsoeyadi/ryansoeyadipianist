@@ -1,4 +1,4 @@
-import React, { useState, createContext } from "react";
+import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
 import SocialMediaIcons from "../components/SocialMediaIcons";
@@ -161,7 +161,7 @@ const DesktopNav = () => {
               </Link>
             </li>
             <li>
-              <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
+              <Link to="media" activeStyle={{ color: "grey" }}>
                 Media
               </Link>
             </li>{" "}

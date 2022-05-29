@@ -22,10 +22,9 @@ const MainContent = styled.div`
 const Wrapper = styled.div`
  
 `
-const index = () => {
+const IndexPage = () => {
   return (
     <Wrapper>
-
       <Layout>
         <MainContent>
           <Aboutimg />
@@ -37,4 +36,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default IndexPage;

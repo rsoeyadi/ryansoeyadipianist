@@ -5,8 +5,6 @@ import { renderRichText } from "gatsby-source-contentful/rich-text";
 import { INLINES, BLOCKS, MARKS } from "@contentful/rich-text-types";
 import styled from "styled-components";
 import Heading from "../components/Heading";
-import SHeading from "../components/SHeading";
-import Subheading from "../components/SHeading";
 
 export const query = graphql`
   query eventQuery($slug: String!) {
@@ -198,7 +196,7 @@ const EventPage = (props) => {
               src={props.data.contentfulEvent.youtubeSrc}
               width="600"
               height="400"
-            ></iframe>{" "}
+            ></iframe>
           </Video>
         </EventContentWithRecording>
       </EventContentWrapper>

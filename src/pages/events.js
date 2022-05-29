@@ -121,7 +121,6 @@ const Image = styled.div`
   }
 `;
 const EventsPage = ({ data, location, props }) => {
-  console.log(props);
   return (
     <>
       <Layout>
