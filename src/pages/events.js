@@ -107,15 +107,13 @@ const EventsPage = ({ data, location, props }) => {
           {data.allContentfulEvent.edges.map(({ node }, i) => (
             <EventWrapper>
               <Link to={`${node.slug}`}>
-                  
                 <h1 className="listed-event">{node.title}</h1>
-
                 <GatsbyImage
                   image={getImage(node.image.gatsbyImageData)}
                   style={{ maxWidth: "1024px", marginTop: "2em" }}
-                />
+                />{" "}
+                <p className="listed-event-date">{node.date}</p>
               </Link>
-              <p className="listed-event-date">{node.date}</p>
             </EventWrapper>
           ))}
         </EventsWrapper>
