@@ -55,16 +55,17 @@ const EventWrapper = styled.div`
 
   .listed-event-date {
     font-size: 16px;
-    line-height: 1.4em;
     position: absolute;
-    background-color: white;
-    right: 30px;
-    top: 90px;
-    height: 50px;
-    width: 50px;
+
+    line-height: 1.67em;
+    width: 60px;
+    height: 60px;
     word-spacing: 50px;
     text-align: center;
     text-transform: uppercase;
+    top: 90px;
+    right: 30px;
+    background: white;
   }
 
   .listed-event {
@@ -111,8 +112,8 @@ const EventsPage = ({ data, location, props }) => {
                 <GatsbyImage
                   image={getImage(node.image.gatsbyImageData)}
                   style={{ maxWidth: "1024px", marginTop: "2em" }}
-                />{" "}
-                <p className="listed-event-date">{node.date}</p>
+                />
+                  <p className="listed-event-date">{node.date}</p>
               </Link>
             </EventWrapper>
           ))}
