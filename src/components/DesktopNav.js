@@ -161,7 +161,7 @@ const DesktopNav = () => {
               </Link>
             </li>
             <li>
-              <Link to="media" activeStyle={{ color: "grey" }}>
+              <Link to="/media" activeStyle={{ color: "grey" }}>
                 Media
               </Link>
             </li>{" "}
