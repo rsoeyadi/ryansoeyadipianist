@@ -13,6 +13,10 @@ const StaticImageWrapper = styled.div`
     svg {
       display: none;
     }
+
+    img {
+      margin-top: 2em;
+    }
   }
 `;
 
@@ -39,7 +43,7 @@ const AboutPageContent = (props) => {
         <SocialMediaIcons />
         <GatsbyImage
           image={image}
-          style={{ maxWidth: "1024px", marginTop: "2em" }}
+          style={{ maxWidth: "1024px"}}
         />
         <ImageCaption>Photo by Jiyang Chen</ImageCaption>
       </StaticImageWrapper>

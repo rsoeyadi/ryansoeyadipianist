@@ -7,7 +7,7 @@ const IconsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 100px;
-  margin-bottom: 1em;
+  
 
   svg {
     cursor: pointer;
