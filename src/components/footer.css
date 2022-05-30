@@ -31,7 +31,7 @@ main {
   footer:first-child {
     grid-column-start: 0;
   }
-  
+
   footer > div:nth-child(2) {
     display: grid;
     margin: 0 auto;
@@ -44,3 +44,29 @@ main {
     width: 90px;
   }
 }
+
+ @media (max-width: 1024px) and (max-height: 430px) {
+    footer {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    padding: 1.5em;
+    grid-column-gap: 2em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
+  }
+
+  footer:first-child {
+    grid-column-start: 0;
+  }
+
+  footer > div:nth-child(2) {
+    display: grid;
+    margin: 0 auto;
+  }
+
+  footer > div:nth-child(2) svg {
+    width: 50px;
+  }
+  footer div svg {
+    width: 90px;
+  }
+  }
