@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import Aboutimg from "../components/AboutPageContent";
-import BiographySection from "../components/BiographySection";
 import "../style/page.css";
 import styled, { createGlobalStyle } from "styled-components";
-import StyledTitle from "../components/MobileTitle";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Heading from "../components/Heading";
@@ -41,7 +38,7 @@ const Wrapper = styled.div`
   margin-top: 7em;
 
   @media only screen and (min-width: 1024px) {
-    margin-top: 3em;
+    margin: 2% auto 3%;
   }
 
   @media (max-width: 1024px) and (max-height: 430px) {
@@ -169,7 +166,7 @@ const ContactPage = (props) => {
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                 <label for="messengerName">
-                  NAME <em>&#x2a;</em>
+                  Name <em>&#x2a;</em>
                 </label>
                 <input
                   id="messengerName"
@@ -180,7 +177,7 @@ const ContactPage = (props) => {
                 />
 
                 <label for="messengerEmail">
-                  EMAIL <em>&#x2a;</em>
+                  Email <em>&#x2a;</em>
                 </label>
                 <input
                   id="messengerEmail"
@@ -190,7 +187,7 @@ const ContactPage = (props) => {
                   required
                 />
                 <label for="messengerSubject">
-                  SUBJECT <em>&#x2a;</em>
+                  Subject <em>&#x2a;</em>
                 </label>
                 <input
                   id="messengerSubject"
@@ -201,7 +198,7 @@ const ContactPage = (props) => {
                 />
 
                 <label for="messengerNote">
-                  MESSAGE <em>&#x2a;</em>
+                  Message <em>&#x2a;</em>
                 </label>
                 <textarea
                   id="messengerNote"
