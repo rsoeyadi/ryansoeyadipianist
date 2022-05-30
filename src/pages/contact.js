@@ -166,7 +166,6 @@ const ContactPage = (props) => {
                 data-netlify-honeypot="bot-field"
               >
                 <input type="hidden" name="contact-form" value="contact" />
-
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                 <label for="messengerName">
@@ -177,6 +176,7 @@ const ContactPage = (props) => {
                   name="messengerName"
                   required=""
                   type="text"
+                  required
                 />
 
                 <label for="messengerEmail">
@@ -187,6 +187,7 @@ const ContactPage = (props) => {
                   name="messengerEmail"
                   required=""
                   type="email"
+                  required
                 />
                 <label for="messengerSubject">
                   SUBJECT <em>&#x2a;</em>
@@ -196,6 +197,7 @@ const ContactPage = (props) => {
                   name="messengerSubject"
                   required=""
                   type="text"
+                  required
                 />
 
                 <label for="messengerNote">
@@ -206,6 +208,7 @@ const ContactPage = (props) => {
                   name="messengerNote"
                   required=""
                   rows="4"
+                  required
                 ></textarea>
 
                 <button className="button-23" id="messengerForm" type="submit">
