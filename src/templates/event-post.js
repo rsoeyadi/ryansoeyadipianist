@@ -55,6 +55,10 @@ const EventContentWrapper = styled.div`
    @media only screen and (min-width: 1024px) {
      margin: 3em 2em 8em;
   }
+
+  @media (max-width: 1024px) and (max-height: 430px) {
+  margin: 3em 2em 1em;
+  }
     .button-23 {
         background-color: #ffffff;
         border: 1px solid #222222;
@@ -105,7 +109,6 @@ const EventContentWrapper = styled.div`
 `;
 
 const Video = styled.div`
-
   /* wrap the video in another element which has an intrinsic aspect ratio */
   position: relative;
   padding-bottom: 56.25%;
@@ -126,7 +129,7 @@ const Video = styled.div`
 const EventContentWithRecording = styled.div`
   margin: 0 auto;
   max-width: 768px;
-  
+  margin-top: 2em;
 
   @media only screen and (min-width: 1024px) {
     max-width: 1600px;
@@ -140,9 +143,7 @@ const EventContentWithRecording = styled.div`
     }
     iFrame {
       grid-column-start: 1;
-      
     }
-
   }
 `;
 
@@ -162,69 +163,76 @@ const EventContentWithoutRecording = styled.div`
 const WhereWhen = styled.div`
   text-align: center;
   margin-top: 1em;
-  
+
   p {
-    margin: 0; padding: 0;
+    margin: 0;
+    padding: 0;
   }
-  
 `;
 const EventPage = (props) => {
   const recordingExists = props.data.contentfulEvent.recordingIsAvailable;
 
   if (recordingExists) {
-  return (
-    <Layout>
-      <EventContentWrapper>
-        <Link to="/events/">
-          <button className="button-23">Back</button>
-        </Link>
-        <Heading>{props.data.contentfulEvent.title}</Heading>
+    return (
+      <Layout>
+        <EventContentWrapper>
+          <Link to="/events/">
+            <button className="button-23">Back</button>
+          </Link>
 
-        <WhereWhen>
-          <p>{props.data.contentfulEvent.date} </p>
-          <p>{props.data.contentfulEvent.location}</p>
-        </WhereWhen>
-        <EventContentWithRecording>
-          <div className="information">
-            <p>
-              {renderRichText(props.data.contentfulEvent.description, options)}
-            </p>
-          </div>
+          <Heading>{props.data.contentfulEvent.title}</Heading>
 
-          <Video>
-            <iframe
-              src={props.data.contentfulEvent.youtubeSrc}
-              width="600"
-              height="400"
-            ></iframe>
-          </Video>
-        </EventContentWithRecording>
-      </EventContentWrapper>
-    </Layout>
-  ); } else {
+          <WhereWhen>
+            <p>{props.data.contentfulEvent.date} </p>
+            <p>{props.data.contentfulEvent.location}</p>
+          </WhereWhen>
+          <EventContentWithRecording>
+            <div className="information">
+              <p>
+                {renderRichText(
+                  props.data.contentfulEvent.description,
+                  options
+                )}
+              </p>
+            </div>
 
-return (
-  <Layout>
-    <EventContentWrapper>
-      <Link to="/events/">
-        <button className="button-23">Back</button>
-      </Link>
-      <Heading>{props.data.contentfulEvent.title}</Heading>
-      <WhereWhen>
-        <p>{props.data.contentfulEvent.date} </p>
-        <p>{props.data.contentfulEvent.location}</p>
-      </WhereWhen>
+            <Video>
+              <iframe
+                src={props.data.contentfulEvent.youtubeSrc}
+                width="600"
+                height="400"
+              ></iframe>
+            </Video>
+          </EventContentWithRecording>
+        </EventContentWrapper>
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout>
+        <EventContentWrapper>
+          <Link to="/events/">
+            <button className="button-23">Back</button>
+          </Link>
+          <Heading>{props.data.contentfulEvent.title}</Heading>
+          <WhereWhen>
+            <p>{props.data.contentfulEvent.date} </p>
+            <p>{props.data.contentfulEvent.location}</p>
+          </WhereWhen>
 
-      <EventContentWithoutRecording>
-        <div className="information">
-          <p>
-            {renderRichText(props.data.contentfulEvent.description, options)}
-          </p>
-        </div>
-      </EventContentWithoutRecording>
-    </EventContentWrapper>
-  </Layout>
-);    
+          <EventContentWithoutRecording>
+            <div className="information">
+              <p>
+                {renderRichText(
+                  props.data.contentfulEvent.description,
+                  options
+                )}
+              </p>
+            </div>
+          </EventContentWithoutRecording>
+        </EventContentWrapper>
+      </Layout>
+    );
   }
 };
 
