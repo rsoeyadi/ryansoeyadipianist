@@ -35,6 +35,10 @@ const GalleryWrapper = styled.div`
   @media only screen and (min-width: 1024px) {
     margin: 2% auto 3%;
   }
+
+  @media (max-width: 1024px) and (max-height: 430px) {
+    margin-top: 2em;
+  }
 `;
 
 const GridWrapper = styled.div`
@@ -46,6 +50,8 @@ const GridWrapper = styled.div`
     grid-template-columns: 1fr 1fr 1fr;
     grid-column-gap: 3em;
   }
+
+  
 `;
 
 const GalleryPage = ({ data }) => {

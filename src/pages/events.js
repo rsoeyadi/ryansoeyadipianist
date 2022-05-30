@@ -36,6 +36,10 @@ const EventsWrapper = styled.div`
     margin: 2% auto 3%;
     
   }
+
+  @media (max-width: 1024px) and (max-height: 430px) {
+    margin-top: 2em;
+  }
 `;
 
 const EventWrapper = styled.div`
@@ -82,6 +86,8 @@ const EventWrapper = styled.div`
       }
     }
   }
+
+  
 `;
 
 const ImageWrapper = styled.div`

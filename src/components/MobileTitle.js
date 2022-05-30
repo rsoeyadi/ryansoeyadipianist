@@ -54,7 +54,11 @@ const Title = styled.div`
 
   @media only screen and (min-width: 1024px) {
     display: none;
-    background-color: red;
+  }
+
+  @media (max-width: 1024px) and (max-height: 430px) {
+    margin-top: 0;
+    display: none;
   }
 
 

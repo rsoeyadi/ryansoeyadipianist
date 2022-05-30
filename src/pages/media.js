@@ -50,6 +50,10 @@ const VideosWrapper = styled.div`
   @media only screen and (min-width: 1024px) {
     margin: 2% auto 3%;
   }
+
+  @media (max-width: 1024px) and (max-height: 430px) {
+    margin-top: 2em;
+  }
 `;
 
 const MediaPage = ( {data} ) => {
