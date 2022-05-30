@@ -7,6 +7,7 @@ module.exports = {
     title: `Ryan Soeyadi | Pianist`,
     siteUrl: `https://www.yourdomain.tld`,
     description: `Pianist Ryan Soeyadi is first prize winner of the 2018 Kosciuzko Foundation Chopin Competition in Washington D.C.`,
+    image: `src/images/image.jpg`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
