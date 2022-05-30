@@ -190,7 +190,7 @@ const ContactPage = (props) => {
                 />
 
                 <label for="messengerNote">
-                  YOUR MESSAGE <em>&#x2a;</em>
+                  MESSAGE <em>&#x2a;</em>
                 </label>
                 <textarea
                   id="messengerNote"
