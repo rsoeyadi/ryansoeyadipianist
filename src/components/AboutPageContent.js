@@ -9,14 +9,15 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 const StaticImageWrapper = styled.div`
   padding: 1.5em 1.5em 0 1.5em;
   max-width: 1024px;
+
   @media only screen and (min-width: 1024px) {
+    
+    margin-top: 5.5em; 
     svg {
       display: none;
     }
 
-    img {
-      margin-top: 2em;
-    }
+    
   }
 `;
 
