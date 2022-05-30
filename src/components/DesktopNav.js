@@ -176,7 +176,7 @@ const DesktopNav = () => {
               </Link>
             </li>
             <li>
-              <Link to="../pages/404.js" activeStyle={{ color: "grey" }}>
+              <Link to="/gallery" activeStyle={{ color: "grey" }}>
                 Gallery
               </Link>
             </li>
