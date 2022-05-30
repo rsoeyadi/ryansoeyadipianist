@@ -11,7 +11,7 @@ import Heading from "../components/Heading";
 
 export const query = graphql`
   query ContactPageQuery {
-    contentfulContactPagePhoto(title: { eq: "Alice Tully Hall Photo" }) {
+    contentfulContactPagePhoto(title: { eq: "ContactPagePhoto" }) {
       title
       image {
         gatsbyImageData(width: 1024)
@@ -201,7 +201,7 @@ const ContactPage = (props) => {
 
                 <button className="button-23" id="messengerForm">
                   Submit
-                </button>
+                </button> 
               </form>
             </Form>
           </MainContent>
