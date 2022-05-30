@@ -188,7 +188,7 @@ const Hamburger = () => {
           </li>
           <li>
             <Link
-              to="../pages/404.js"
+              to="/contact"
               activeStyle={{ textDecoration: "underline" }}
             >
               <button onClick={() => showNav(!nav)}>Contact</button>

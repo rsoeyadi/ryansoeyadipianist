@@ -182,7 +182,7 @@ const DesktopNav = () => {
             </li>
             <li>
               <Link
-                to="../pages/404.js"
+                to="/contact"
                 activeStyle={{ textDecoration: "underline" }}
               >
                 Contact
