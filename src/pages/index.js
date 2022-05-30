@@ -5,6 +5,19 @@ import BiographySection from "../components/BiographySection";
 import "../style/page.css";
 import styled, { createGlobalStyle } from "styled-components";
 import StyledTitle from '../components/MobileTitle'
+import { graphql, Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+
+export const query = graphql`
+  query IndexPageQuery {
+    contentfulIndexPageImage(title: { eq: "IndexPhoto" }) {
+      title
+      image {
+        gatsbyImageData(width: 1024)
+      }
+    }
+  }
+`;
 
 const MainContent = styled.div`
   @media only screen and (min-width: 1024px) {
@@ -22,12 +35,12 @@ const MainContent = styled.div`
 const Wrapper = styled.div`
  
 `
-const IndexPage = () => {
+const IndexPage = (props) => {
   return (
     <Wrapper>
       <Layout>
         <MainContent>
-          <Aboutimg />
+          <Aboutimg>{props.data.contentfulIndexPageImage}</Aboutimg>
 
           <BiographySection />
         </MainContent>
