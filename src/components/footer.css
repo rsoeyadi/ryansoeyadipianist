@@ -5,6 +5,10 @@ footer {
   text-align: center;
 }
 
+footer > div:nth-child(2) {
+  display: none;
+}
+
 .flexThisBox {
   display: flex;
   flex-direction: column;
@@ -17,7 +21,7 @@ main {
 
 @media only screen and (min-width: 1024px) {
   footer {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 0 auto;
     padding: 1.5em;
     grid-column-gap: 2em;
@@ -27,7 +31,15 @@ main {
   footer:first-child {
     grid-column-start: 0;
   }
+  
+  footer > div:nth-child(2) {
+    display: grid;
+    margin: 0 auto;
+  }
 
+  footer > div:nth-child(2) svg {
+    width: 50px;
+  }
   footer div svg {
     width: 90px;
   }

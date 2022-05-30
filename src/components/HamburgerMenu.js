@@ -156,7 +156,7 @@ const Hamburger = () => {
           <div />
         </MenuIcon>
         <Link to="/">
-          <Rs />  
+          <Rs />
         </Link>
       </MobileBar>
       <MenuLinks nav={nav}>
@@ -187,10 +187,7 @@ const Hamburger = () => {
             </Link>
           </li>
           <li>
-            <Link
-              to="/contact"
-              activeStyle={{ textDecoration: "underline" }}
-            >
+            <Link to="/contact" activeStyle={{ color: "grey" }}>
               <button onClick={() => showNav(!nav)}>Contact</button>
             </Link>
           </li>

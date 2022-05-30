@@ -5,7 +5,7 @@ const H1 = styled.h1`
   font-weight: 300;
   margin: 0 auto;
   display: block;
-  margin-bottom: 0;
+  margin-bottom: 1em;
 
   text-align: center;
   color: rgba(100, 100, 100, 0.1);

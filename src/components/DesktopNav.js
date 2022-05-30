@@ -181,10 +181,7 @@ const DesktopNav = () => {
               </Link>
             </li>
             <li>
-              <Link
-                to="/contact"
-                activeStyle={{ textDecoration: "underline" }}
-              >
+              <Link to="/contact" activeStyle={{ color: "grey" }}>
                 Contact
               </Link>
             </li>

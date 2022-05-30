@@ -3,6 +3,7 @@ import HamburgerMenu from './HamburgerMenu'
 import DesktopNav from './DesktopNav'
 import styled from "styled-components";
 import GatsbyLogo from "../images/svg/gatsby.svg";
+import SocialMediaIcons from "../components/SocialMediaIcons";
 import './footer.css'
 const Layout = (props) => {
   const children = props.children;
@@ -14,17 +15,20 @@ const Layout = (props) => {
 
     font-size: 10px;
 
+    
+    
   `;
   return (
     <div className="flexThisBox">
-      <HamburgerMenu className="mobile"/>
+      <HamburgerMenu className="mobile" />
       <DesktopNav />
       <main>{children}</main>
       <footer>
         <div>
           <FooterP>Built with</FooterP>
-         <GatsbyLogo />
+          <GatsbyLogo />
         </div>
+        <SocialMediaIcons />
         <div className="footer">
           <FooterP>©{new Date().getFullYear()} Ryan Soeyadi</FooterP>
           <FooterP> All Rights Reserved </FooterP>

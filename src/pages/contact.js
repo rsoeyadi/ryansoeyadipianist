@@ -90,7 +90,6 @@ const Form = styled.div`
   input:focus,
   textarea:focus {
     border: 1px solid blue;
-    
   }
 
   textarea {
@@ -141,6 +140,10 @@ const Form = styled.div`
     -webkit-text-fill-color: #2a293e;
     -webkit-box-shadow: 0 0 0px 1000px #f8f4e5 inset;
     transition: background-color 5000s ease-in-out 0s;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    margin-top: 0;
   }
 `;
 const ContactPage = (props) => {
