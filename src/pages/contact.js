@@ -160,12 +160,12 @@ const ContactPage = (props) => {
             <GatsbyImage image={image} style={{ maxWidth: "1024px" }} />
             <Form>
               <form
+                name="contact"
                 method="post"
-                netlify-honeypot="bot-field"
                 data-netlify="true"
-                name="Contact Form"
+                data-netlify-honeypot="bot-field"
               >
-                <input type="hidden" name="Contact Form" value="Contact Form" />
+                <input type="hidden" name="contact-form" value="contact" />
 
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
