@@ -163,7 +163,10 @@ const ContactPage = (props) => {
                 method="post"
                 netlify-honeypot="bot-field"
                 data-netlify="true"
+                name="Contact Form"
               >
+                <input type="hidden" name="Contact Form" value="Contact Form" />
+
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
                 <label for="messengerName">
