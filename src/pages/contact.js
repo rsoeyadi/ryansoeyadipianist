@@ -205,7 +205,7 @@ const ContactPage = (props) => {
                   rows="4"
                 ></textarea>
 
-                <button className="button-23" id="messengerForm">
+                <button className="button-23" id="messengerForm" type="submit">
                   Submit
                 </button>
               </form>
