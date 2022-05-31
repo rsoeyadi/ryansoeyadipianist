@@ -8,17 +8,6 @@ import { graphql } from "gatsby";
 import { Helmet } from "react-helmet";
 import ogImage from "../images/image.jpg";
 
-export const query = graphql`
-  query IndexPageQuery {
-    contentfulIndexPageImage(title: { eq: "IndexPhoto" }) {
-      title
-      image {
-        gatsbyImageData(width: 1024)
-      }
-    }
-  }
-`;
-
 const MainContent = styled.div`
   @media only screen and (min-width: 1024px) {
     display: grid;
@@ -71,5 +60,16 @@ const IndexPage = (props) => {
     </Wrapper>
   );
 };
+
+export const query = graphql`
+  query IndexPageQuery {
+    contentfulIndexPageImage(title: { eq: "IndexPhoto" }) {
+      title
+      image {
+        gatsbyImageData(width: 1024)
+      }
+    }
+  }
+`;
 
 export default IndexPage;

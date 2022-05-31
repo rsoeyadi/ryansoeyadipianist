@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+
 const H1 = styled.h1`
   // https://1stwebdesigner.com/css-text-effects/
   font-size: 1.2em;
@@ -86,6 +87,7 @@ const H1 = styled.h1`
     }
   }
 `;
+
 const Subheading = (props) => {
   return (
     <>

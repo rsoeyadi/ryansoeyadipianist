@@ -7,7 +7,6 @@ const IconsWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 100px;
-  
 
   svg {
     cursor: pointer;
@@ -36,6 +35,7 @@ const IconsWrapper = styled.div`
     }
   }
 `;
+
 const SocialMediaIcons = () => {
   return (
     <IconsWrapper>

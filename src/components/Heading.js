@@ -85,6 +85,7 @@ const H1 = styled.h1`
     }
   }
 `;
+
 const Heading = (props) => {
   
   return (

@@ -8,17 +8,6 @@ import Heading from "../components/Heading";
 import { Helmet } from "react-helmet";
 import ogImage from "../images/image.jpg";
 
-export const query = graphql`
-  query ContactPageQuery {
-    contentfulContactPagePhoto(title: { eq: "ContactPagePhoto" }) {
-      title
-      image {
-        gatsbyImageData(width: 1024)
-      }
-    }
-  }
-`;
-
 const MainContent = styled.div`
   padding: 1em;
   margin: 0 auto;
@@ -284,5 +273,17 @@ const ContactPage = (props) => {
     </>
   );
 };
+
+export const query = graphql`
+  query ContactPageQuery {
+    contentfulContactPagePhoto(title: { eq: "ContactPagePhoto" }) {
+      title
+      image {
+        gatsbyImageData(width: 1024)
+      }
+    }
+  }
+`;
+
 
 export default ContactPage;

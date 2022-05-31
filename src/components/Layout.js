@@ -5,6 +5,7 @@ import styled from "styled-components";
 import GatsbyLogo from "../images/svg/gatsby.svg";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 import './footer.css'
+
 const Layout = (props) => {
   const children = props.children;
   const FooterP = styled.p`
@@ -12,11 +13,7 @@ const Layout = (props) => {
     padding: 0;
     display: block;
     white-space: pre;
-
     font-size: 10px;
-
-    
-    
   `;
 
   return (

@@ -60,8 +60,6 @@ const Title = styled.div`
     margin-top: 0;
     display: none;
   }
-
-
 `;
 
 const MobileTitle = () => {

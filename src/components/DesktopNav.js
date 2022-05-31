@@ -10,7 +10,6 @@ const Global = createGlobalStyle`
     overflow-x: hidden;
     height: 100%;
   }
-
 `;
 
 const Navbar = styled.div`
@@ -40,6 +39,7 @@ const MenuLinks = styled.div`
     padding: 0;
     list-style: none;
   }
+
   li {
     padding: 10px 17px;
     text-align: center;
@@ -154,12 +154,10 @@ const DesktopTitleWithoutAnimation = styled.div`
   grid-row-gap: 1em;
   grid-column-gap: 1em;
 
-
   span {
     display: inline-block;
     font-size: 25px;
   }
-
 
   .title {
     font-size: 40px;
@@ -168,8 +166,6 @@ const DesktopTitleWithoutAnimation = styled.div`
   span.title:nth-child(1) {
     text-align: right;
   }
-
-  
 
   .subtitle {
     margin-top: -50px;
@@ -194,7 +190,6 @@ const DesktopTitleWithoutAnimation = styled.div`
     grid-column-start: 2;
   }
 
-
   svg {
     width: 80px;
   }
@@ -209,116 +204,113 @@ const DesktopTitleWithoutAnimation = styled.div`
 const DesktopNav = (props) => {
   const isIndex = props.isIndex;
 
-  if (isIndex == "1"  ) {
-  return (
-    <div>
-      <Global />
-
-      <Navbar>
-        <DesktopTitleAnimation>
-          <Link to="/">
-            <Rs />
-          </Link>
-          <div>
-            <span className="title load-in-1">Ryan&nbsp;</span>
-            <span className="title load-in-2">Soeyadi</span>
-          </div>
-          <span className="subtitle load-in-3">Pianist</span>
-        </DesktopTitleAnimation>
-        <MenuLinks>
-          <ul>
-            <li>
-              <Link to="/" activeStyle={{ color: "grey" }}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/media" activeStyle={{ color: "grey" }}>
-                Media
-              </Link>
-            </li>{" "}
-            <li>
-              <Link to="/blog" activeStyle={{ color: "grey" }}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/events" activeStyle={{ color: "grey" }}>
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" activeStyle={{ color: "grey" }}>
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" activeStyle={{ color: "grey" }}>
-                Contact
-              </Link>
-            </li>
-            <li></li>
-          </ul>
-        </MenuLinks>
-      </Navbar>
-    </div>
-  );
-} else {
-   return (
-    <div>
-      <Global />
-
-      <Navbar>
-        <DesktopTitleWithoutAnimation>
-          <Link to="/">
-            <Rs />
-          </Link>
-          <div>
-            <span className="title load-in-1">Ryan&nbsp;</span>
-            <span className="title load-in-2">Soeyadi</span>
-          </div>
-          <span className="subtitle load-in-3">Pianist</span>
-        </DesktopTitleWithoutAnimation>
-        <MenuLinks>
-          <ul>
-            <li>
-              <Link to="/" activeStyle={{ color: "grey" }}>
-                About
-              </Link>
-            </li>
-            <li>
-              <Link to="/media" activeStyle={{ color: "grey" }}>
-                Media
-              </Link>
-            </li>{" "}
-            <li>
-              <Link to="/blog" activeStyle={{ color: "grey" }}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link to="/events" activeStyle={{ color: "grey" }}>
-                Events
-              </Link>
-            </li>
-            <li>
-              <Link to="/gallery" activeStyle={{ color: "grey" }}>
-                Gallery
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" activeStyle={{ color: "grey" }}>
-                Contact
-              </Link>
-            </li>
-            <li></li>
-          </ul>
-        </MenuLinks>
-      </Navbar>
-    </div>
-  );
+  if (isIndex == "1") {
+    return (
+      <div>
+        <Global />
+        <Navbar>
+          <DesktopTitleAnimation>
+            <Link to="/">
+              <Rs />
+            </Link>
+            <div>
+              <span className="title load-in-1">Ryan&nbsp;</span>
+              <span className="title load-in-2">Soeyadi</span>
+            </div>
+            <span className="subtitle load-in-3">Pianist</span>
+          </DesktopTitleAnimation>
+          <MenuLinks>
+            <ul>
+              <li>
+                <Link to="/" activeStyle={{ color: "grey" }}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/media" activeStyle={{ color: "grey" }}>
+                  Media
+                </Link>
+              </li>{" "}
+              <li>
+                <Link to="/blog" activeStyle={{ color: "grey" }}>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/events" activeStyle={{ color: "grey" }}>
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" activeStyle={{ color: "grey" }}>
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" activeStyle={{ color: "grey" }}>
+                  Contact
+                </Link>
+              </li>
+              <li></li>
+            </ul>
+          </MenuLinks>
+        </Navbar>
+      </div>
+    );
+  } else {
+    return (
+      <div>
+        <Global />
+        <Navbar>
+          <DesktopTitleWithoutAnimation>
+            <Link to="/">
+              <Rs />
+            </Link>
+            <div>
+              <span className="title load-in-1">Ryan&nbsp;</span>
+              <span className="title load-in-2">Soeyadi</span>
+            </div>
+            <span className="subtitle load-in-3">Pianist</span>
+          </DesktopTitleWithoutAnimation>
+          <MenuLinks>
+            <ul>
+              <li>
+                <Link to="/" activeStyle={{ color: "grey" }}>
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/media" activeStyle={{ color: "grey" }}>
+                  Media
+                </Link>
+              </li>{" "}
+              <li>
+                <Link to="/blog" activeStyle={{ color: "grey" }}>
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link to="/events" activeStyle={{ color: "grey" }}>
+                  Events
+                </Link>
+              </li>
+              <li>
+                <Link to="/gallery" activeStyle={{ color: "grey" }}>
+                  Gallery
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" activeStyle={{ color: "grey" }}>
+                  Contact
+                </Link>
+              </li>
+              <li></li>
+            </ul>
+          </MenuLinks>
+        </Navbar>
+      </div>
+    );
+  }
 };
-}
-
 
 export default DesktopNav;

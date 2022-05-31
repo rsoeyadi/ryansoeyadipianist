@@ -12,6 +12,7 @@ const Global = createGlobalStyle`
     height: 100%;
   }
 `;
+
 const MenuIcon = styled.button`
   top: 2rem;
   left: 2rem;
@@ -19,8 +20,6 @@ const MenuIcon = styled.button`
   margin-left: 2em;
   display: inline-flex;
   flex-direction: column;
- 
-
   justify-content: space-around;
   height: 2.5rem;
   background: transparent;
@@ -29,7 +28,6 @@ const MenuIcon = styled.button`
   z-index: 9999;
 
   div {
-    
     width: 2.37rem;
     height: 0.24rem;
     background: black;
@@ -63,21 +61,19 @@ const MenuIcon = styled.button`
 const MenuLinks = styled.nav`
   display: flex;
   flex-direction: column;
-
   justify-content: center;
   align-items: center;
   text-align: center;
   height: 100%;
-
   width: 100%;
   background: white;
   z-index: 9998;
   position: fixed;
-
   top: 0;
   right: 0;
   transform: ${({ nav }) => (nav ? "translateX(0)" : "translateX(-100%)")};
   transition: transform 300ms;
+
   ul {
     list-style-type: none;
     padding: 0;
@@ -86,6 +82,7 @@ const MenuLinks = styled.nav`
   li {
     margin-top: 2.5rem;
   }
+
   a {
     text-decoration: none;
     color: black;
@@ -106,6 +103,7 @@ const MenuLinks = styled.nav`
     cursor: pointer;
     outline: inherit;
   }
+
   @media only screen and (min-width: 1024px) {
     display: none;
   }
@@ -141,10 +139,9 @@ const MobileBar = styled.div`
   }
 `;
 
-
 const Hamburger = () => {
+  
   const [nav, showNav] = useState(false);
-
 
   return (
     <div>

@@ -6,7 +6,6 @@ import styled from "styled-components";
 const BiographySectionWrapper = styled.div`
     padding: 0 1em 1em 1em;
     margin-top: 3em;
-
 `
 const BiographySection = () => {
   return (

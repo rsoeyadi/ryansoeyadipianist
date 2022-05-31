@@ -26,8 +26,6 @@ const MainContent = styled.div`
   }
 `;
 
-const Image = styled.div``;
-
 const GalleryWrapper = styled.div`
   margin-top: 8em;
   max-width: 1500px;

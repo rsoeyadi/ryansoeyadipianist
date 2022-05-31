@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { StaticImage } from "gatsby-plugin-image";
-import { StaticImageStyle } from "./Aboutimg.module.css";
 import styled from "styled-components";
 import SocialMediaIcons from "./SocialMediaIcons";
 import StyledTitle from "./MobileTitle";
@@ -42,6 +40,7 @@ const Wrapper = styled.div`
     
   }
 `;
+
 const AboutPageContent = (props) => {
   const image = getImage(props.children.image.gatsbyImageData);
 
