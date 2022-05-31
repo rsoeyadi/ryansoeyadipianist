@@ -1,1 +1,1 @@
-This is my personal website https://ryansoeyadipianist.com. I built it using GatsbyJS and satisfied with the improvement of load times and ability to add content through a CMS (Contentful) rather than having to deal with the code whenever I needed to update.
+This is my personal website https://ryansoeyadipianist.com. I built it using GatsbyJS and am satisfied with the improvement of load times and ability to add content through a CMS (Contentful) rather than having to deal with the code whenever I needed to update.
