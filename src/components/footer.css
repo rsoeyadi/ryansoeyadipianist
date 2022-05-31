@@ -62,11 +62,12 @@ main {
     display: grid;
     margin: 0 auto;
   }
+  
+   footer div svg {
+    width: 90px;
+  }
 
   footer > div:nth-child(2) svg {
     width: 50px;
   }
-  footer div svg {
-    width: 90px;
-  }
-  }
+}
