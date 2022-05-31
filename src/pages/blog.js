@@ -78,7 +78,7 @@ const BlogPage = ({ data, location }) => {
       </Helmet>
       <Layout>
         <BlogsWrapper>
-          <Heading className="center">BLOG</Heading>
+          <Heading className="center">Blog</Heading>
 
           {data.allContentfulBlogPost.edges.map(({ node }, i) => (
             <Blog>
