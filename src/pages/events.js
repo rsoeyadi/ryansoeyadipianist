@@ -135,7 +135,10 @@ const EventsPage = ({ data, location, props }) => {
         <meta charSet="utf-8" />
         <title>Ryan Soeyadi | Events</title>
         <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
-        <meta name="description" content="View Pianist Ryan Soeyadi's upcoming and past performances." />
+        <meta
+          name="description"
+          content="View Pianist Ryan Soeyadi's upcoming and past performances."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
         <meta property="og:image" content={ogImage} />
@@ -153,7 +156,7 @@ const EventsPage = ({ data, location, props }) => {
 
         <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
       </Helmet>
-      <Layout>
+      <Layout isIndex="0">
         <EventsWrapper>
           <Heading className="center">Events</Heading>
           {data.allContentfulEvent.edges.map(({ node }, i) => (

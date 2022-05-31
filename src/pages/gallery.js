@@ -80,7 +80,7 @@ const GalleryPage = ({ data }) => {
         />
         <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
       </Helmet>
-      <Layout>
+      <Layout isIndex="0">
         <GalleryWrapper>
           <Heading>Gallery</Heading>
           <GridWrapper>

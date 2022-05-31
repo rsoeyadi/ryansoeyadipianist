@@ -209,7 +209,7 @@ const DesktopTitleWithoutAnimation = styled.div`
 const DesktopNav = (props) => {
   const isIndex = props.isIndex;
 
-  if (isIndex) {
+  if (isIndex == "1"  ) {
   return (
     <div>
       <Global />

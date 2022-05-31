@@ -76,7 +76,7 @@ const BlogPage = ({ data, location }) => {
         />
         <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
       </Helmet>
-      <Layout>
+      <Layout isIndex="0">
         <BlogsWrapper>
           <Heading className="center">Blog</Heading>
 
