@@ -144,11 +144,16 @@ const Form = styled.div`
   @media only screen and (min-width: 1024px) {
     margin-top: 0;
   }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 const FormGroup = styled.div`
   display: flex;
-  
+
 `
 
 const FormGroupLabels = styled.div`
