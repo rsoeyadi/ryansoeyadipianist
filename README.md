@@ -1,3 +1,5 @@
-This is my personal website https://ryansoeyadipianist.com. I built it using GatsbyJS and am satisfied with the improvement of load times and ability to add content through a CMS (Contentful) rather than having to deal with the code whenever I needed to update.
-
+# Personal Website for Pianist Ryan Soeyadi
 [![Netlify Status](https://api.netlify.com/api/v1/badges/6f13395d-a1eb-4a9f-8fab-f6473399fe9f/deploy-status)](https://app.netlify.com/sites/ryansoeyadipianist/deploys)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/40658f473b514373a7335525e0b8be12)](https://www.codacy.com/gh/rsoeyadi/ryansoeyadipianist/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=rsoeyadi/ryansoeyadipianist&amp;utm_campaign=Badge_Grade)
+
+This is my personal website https://ryansoeyadipianist.com. It's built using [GatsbyJS](https://www.gatsbyjs.com) along with many helpful plugins such as styled-components,  react-helmet, and more. Content such as blog posts, events, and images are all hosted on [Contentful](https://www.contentful.com). The website itself is hosted on [Netlify](https://www.netlify.com), which takes care of the form handling.
