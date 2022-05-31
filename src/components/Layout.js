@@ -18,10 +18,11 @@ const Layout = (props) => {
     
     
   `;
+
   return (
     <div className="flexThisBox">
       <HamburgerMenu className="mobile" />
-      <DesktopNav />
+      <DesktopNav isIndex={props.isIndex} />
       <main>{children}</main>
       <footer>
         <div>

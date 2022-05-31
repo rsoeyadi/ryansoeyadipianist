@@ -28,7 +28,7 @@ const Navbar = styled.div`
   @media only screen and (min-width: 1024px) {
     padding: 50px 3% 0 5%;
   }
-  
+
   @media only screen and (max-height: 430px) {
     padding: 50px 0 0 5%;
   }
@@ -58,7 +58,7 @@ const MenuLinks = styled.div`
     }
   }
 `;
-const DesktopTitle = styled.div`
+const DesktopTitleAnimation = styled.div`
   margin-top: 2em;
   text-align: left;
   display: grid;
@@ -145,13 +145,77 @@ const DesktopTitle = styled.div`
   }
 `;
 
-const DesktopNav = () => {
+const DesktopTitleWithoutAnimation = styled.div`
+  margin-top: 2em;
+  text-align: left;
+  display: grid;
+  grid-template-rows: 1fr 0.5fr;
+  grid-template-columns: 0.5fr 1fr;
+  grid-row-gap: 1em;
+  grid-column-gap: 1em;
+
+
+  span {
+    display: inline-block;
+    font-size: 25px;
+  }
+
+
+  .title {
+    font-size: 40px;
+  }
+
+  span.title:nth-child(1) {
+    text-align: right;
+  }
+
+  
+
+  .subtitle {
+    margin-top: -50px;
+    font-family: "Great Vibes", cursive;
+    font-size: 32px;
+    grid-column-start: 2;
+  }
+
+  @media only screen and (max-height: 430px) {
+    .subtitle {
+      margin-top: 0;
+    }
+  }
+
+  @media only screen and (max-height: 430px) and (min-width: 1000px) {
+    .subtitle {
+      margin-top: -30px;
+    }
+  }
+
+  span.subtitle {
+    grid-column-start: 2;
+  }
+
+
+  svg {
+    width: 80px;
+  }
+
+  @media only screen and (max-height: 430px) {
+    svg {
+      width: 70px;
+    }
+  }
+`;
+
+const DesktopNav = (props) => {
+  const isIndex = props.isIndex;
+
+  if (isIndex) {
   return (
     <div>
       <Global />
 
       <Navbar>
-        <DesktopTitle>
+        <DesktopTitleAnimation>
           <Link to="/">
             <Rs />
           </Link>
@@ -160,7 +224,61 @@ const DesktopNav = () => {
             <span className="title load-in-2">Soeyadi</span>
           </div>
           <span className="subtitle load-in-3">Pianist</span>
-        </DesktopTitle>
+        </DesktopTitleAnimation>
+        <MenuLinks>
+          <ul>
+            <li>
+              <Link to="/" activeStyle={{ color: "grey" }}>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/media" activeStyle={{ color: "grey" }}>
+                Media
+              </Link>
+            </li>{" "}
+            <li>
+              <Link to="/blog" activeStyle={{ color: "grey" }}>
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link to="/events" activeStyle={{ color: "grey" }}>
+                Events
+              </Link>
+            </li>
+            <li>
+              <Link to="/gallery" activeStyle={{ color: "grey" }}>
+                Gallery
+              </Link>
+            </li>
+            <li>
+              <Link to="/contact" activeStyle={{ color: "grey" }}>
+                Contact
+              </Link>
+            </li>
+            <li></li>
+          </ul>
+        </MenuLinks>
+      </Navbar>
+    </div>
+  );
+} else {
+   return (
+    <div>
+      <Global />
+
+      <Navbar>
+        <DesktopTitleWithoutAnimation>
+          <Link to="/">
+            <Rs />
+          </Link>
+          <div>
+            <span className="title load-in-1">Ryan&nbsp;</span>
+            <span className="title load-in-2">Soeyadi</span>
+          </div>
+          <span className="subtitle load-in-3">Pianist</span>
+        </DesktopTitleWithoutAnimation>
         <MenuLinks>
           <ul>
             <li>
@@ -200,5 +318,7 @@ const DesktopNav = () => {
     </div>
   );
 };
+}
+
 
 export default DesktopNav;

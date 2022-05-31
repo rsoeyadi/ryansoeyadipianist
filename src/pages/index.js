@@ -61,7 +61,7 @@ const IndexPage = (props) => {
 
         <meta property="og:site_name" content="Ryan Soeyadi Pianist"/>
       </Helmet>
-      <Layout>
+      <Layout isIndex="1">
         <MainContent>
           <Aboutimg>{props.data.contentfulIndexPageImage}</Aboutimg>
 
