@@ -23,12 +23,16 @@ const Navbar = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 5% 0 5%;
+    padding: 50px 3% 0 5%;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px 0px;
   }
 
-  @media only screen and (min-width: 1024px), (max-height: 1175px) {
-    padding: 50px 0 0 5%;
+  // @media only screen and (min-width: 1024px), (max-height: 1175px) {
+  //   padding: 50px 0 0 5%;
+  // }
+
+  @media only screen and (min-width: 1350px) {
+    padding: 50px 5.5% 0 5%;
   }
 `;
 
@@ -48,6 +52,12 @@ const MenuLinks = styled.div`
 
   a {
     color: black;
+  }
+
+  @media only screen and (min-width: 1400px) {
+    li {
+      padding: 10px 23px;
+    }
   }
 `;
 const DesktopTitle = styled.div`
