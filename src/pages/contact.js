@@ -145,6 +145,15 @@ const Form = styled.div`
     margin-top: 0;
   }
 `;
+
+const FormGroup = styled.div`
+  display: flex;
+  
+`
+
+const FormGroupLabels = styled.div`
+  display: flex;
+`;
 const ContactPage = (props) => {
   const image = getImage(
     props.data.contentfulContactPagePhoto.image.gatsbyImageData
@@ -156,7 +165,10 @@ const ContactPage = (props) => {
         <meta charSet="utf-8" />
         <title>Ryan Soeyadi | Contact</title>
         <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
-        <meta name="description" content="Get in touch with Pianist Ryan Soeyadi." />
+        <meta
+          name="description"
+          content="Get in touch with Pianist Ryan Soeyadi."
+        />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
         <meta property="og:image" content={ogImage} />
@@ -178,7 +190,11 @@ const ContactPage = (props) => {
           <Heading>Contact</Heading>
           <MainContent>
             <GatsbyImage image={image} style={{ maxWidth: "1024px" }} />
+
             <Form>
+              <p>
+                <em>required &#x2a;</em>
+              </p>
               <form
                 name="contact"
                 method="post"
@@ -188,19 +204,32 @@ const ContactPage = (props) => {
                 <input type="hidden" name="contact-form" value="contact" />
                 <input type="hidden" name="bot-field" />
                 <input type="hidden" name="form-name" value="contact" />
-                <label for="messengerName">
-                  Name <em>&#x2a;</em>
-                </label>
-                <input
-                  id="messengerName"
-                  name="messengerName"
-                  required=""
-                  type="text"
-                  required
-                />
-
+                <FormGroupLabels>
+                  <label for="messengerFirstName">
+                    First Name <em>&#x2a;</em>
+                  </label>
+                  <label for="messengerLastName">
+                    Last Name <em>&#x2a;</em>
+                  </label>
+                </FormGroupLabels>
+                <FormGroup>
+                  <input
+                    id="messengerFirstName"
+                    name="messengerFirstName"
+                    required=""
+                    type="text"
+                    required
+                  />
+                  <input
+                    id="messengerLastName"
+                    name="messengerLastName"
+                    required=""
+                    type="text"
+                    required
+                  />{" "}
+                </FormGroup>
                 <label for="messengerEmail">
-                  Email <em>&#x2a;</em>
+                  Email Address<em>&#x2a;</em>
                 </label>
                 <input
                   id="messengerEmail"
@@ -219,7 +248,6 @@ const ContactPage = (props) => {
                   type="text"
                   required
                 />
-
                 <label for="messengerNote">
                   Message <em>&#x2a;</em>
                 </label>
@@ -230,7 +258,6 @@ const ContactPage = (props) => {
                   rows="4"
                   required
                 ></textarea>
-
                 <button className="button-23" id="messengerForm" type="submit">
                   Submit
                 </button>
