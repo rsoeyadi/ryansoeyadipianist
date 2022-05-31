@@ -5,6 +5,8 @@ import styled, { createGlobalStyle } from "styled-components";
 import { graphql, Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Heading from "../components/Heading";
+import { Helmet } from "react-helmet";
+import ogImage from "../images/image.jpg";
 
 export const query = graphql`
   query ContactPageQuery {
@@ -150,6 +152,27 @@ const ContactPage = (props) => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ryan Soeyadi | Contact</title>
+        <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
+        <meta name="description" content="Get in touch with Pianist Ryan Soeyadi." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:title" content="Ryan Soeyadi | Contact" />
+        <meta
+          name="twitter:description"
+          content="Pianist Ryan Soeyadi | Contact"
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="Pianist Ryan Soeyadi | Contact" />
+        <meta
+          name="twitter:image:alt"
+          content="Photo of Pianist Ryan Soeyadi"
+        />
+        <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
+      </Helmet>
       <Layout>
         <Wrapper>
           <Heading>Contact</Heading>

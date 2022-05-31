@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import Aboutimg from "../components/AboutPageContent";
-import BiographySection from "../components/BiographySection";
 import "../style/page.css";
-import styled, { createGlobalStyle } from "styled-components";
-import StyledTitle from "../components/MobileTitle";
+import styled from "styled-components";
 import Heading from "../components/Heading";
 import { graphql } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
+import ogImage from "../images/image.jpg";
 
 const MainContent = styled.div`
   display: grid;
@@ -57,6 +56,30 @@ const GridWrapper = styled.div`
 const GalleryPage = ({ data }) => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ryan Soeyadi | Gallery</title>
+        <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
+        <meta
+          name="description"
+          content="View Pianist Ryan Soeyadi's photo gallery."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:title" content="Ryan Soeyadi | Gallery" />
+        <meta
+          name="twitter:description"
+          content="Pianist Ryan Soeyadi | Contact"
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="Pianist Ryan Soeyadi | Gallery" />
+        <meta
+          name="twitter:image:alt"
+          content="Photo of Pianist Ryan Soeyadi"
+        />
+        <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
+      </Helmet>
       <Layout>
         <GalleryWrapper>
           <Heading>Gallery</Heading>

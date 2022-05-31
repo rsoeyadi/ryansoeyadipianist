@@ -1,7 +1,6 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import { Link } from "gatsby";
-import SocialMediaIcons from "../components/SocialMediaIcons";
 import Rs from "../images/svg/rs.svg";
 
 const Global = createGlobalStyle`

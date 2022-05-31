@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import Aboutimg from "../components/AboutPageContent";
-import BiographySection from "../components/BiographySection";
 import "../style/page.css";
 import styled, { createGlobalStyle } from "styled-components";
-import StyledTitle from "../components/MobileTitle";
 import Heading from "../components/Heading";
 import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
+import ogImage from "../images/image.jpg";
 
 const MainContent = styled.div`
   display: grid;
@@ -60,6 +59,34 @@ const MediaPage = ( {data} ) => {
     console.log({data});
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ryan Soeyadi | Media</title>
+        <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
+        <meta
+          name="description"
+          content="Pianist Ryan Soeyadi | Video Performances"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:title" content="Ryan Soeyadi | Pianist" />
+        <meta
+          name="twitter:description"
+          content="Pianist Ryan Soeyadi | Video Performances"
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta
+          name="twitter:card"
+          content="Pianist Ryan Soeyadi | Video Performances"
+        />
+        <meta
+          name="twitter:image:alt"
+          content="Photo of Pianist Ryan Soeyadi"
+        />
+
+        <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
+      </Helmet>
       <Layout>
         <VideosWrapper>
           <Heading>Videos</Heading>

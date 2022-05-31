@@ -3,10 +3,10 @@ import Layout from "../components/Layout";
 import Aboutimg from "../components/AboutPageContent";
 import BiographySection from "../components/BiographySection";
 import "../style/page.css";
-import styled, { createGlobalStyle } from "styled-components";
-import StyledTitle from '../components/MobileTitle'
-import { graphql, Link } from "gatsby";
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import styled from "styled-components";
+import { graphql } from "gatsby";
+import { Helmet } from "react-helmet";
+import ogImage from "../images/image.jpg";
 
 export const query = graphql`
   query IndexPageQuery {
@@ -32,12 +32,35 @@ const MainContent = styled.div`
     }
   }
 `;
-const Wrapper = styled.div`
- 
-`
+const Wrapper = styled.div``;
 const IndexPage = (props) => {
   return (
     <Wrapper>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ryan Soeyadi | Pianist</title>
+        <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
+        <meta
+          name="description"
+          content="Pianist Ryan Soeyadi is first prize winner of the 2018 Kosciuzko Foundation Chopin Competition in Washington D.C."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:title" content="Ryan Soeyadi | Pianist" />
+        <meta
+          name="twitter:description"
+          content="Pianist Ryan Soeyadi is first prize winner of the 2018 Kosciuzko Foundation Chopin Competition in Washington D.C."
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta
+          name="twitter:card"
+          content="Pianist Ryan Soeyadi is first prize winner of the 2018 Kosciuzko Foundation Chopin Competition in Washington D.C."
+        />
+        <meta name="twitter:image:alt" content="Photo of Pianist Ryan Soeyadi"/>
+
+        <meta property="og:site_name" content="Ryan Soeyadi Pianist"/>
+      </Helmet>
       <Layout>
         <MainContent>
           <Aboutimg>{props.data.contentfulIndexPageImage}</Aboutimg>

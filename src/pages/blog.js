@@ -5,8 +5,9 @@ import "../style/page.css";
 import styled from "styled-components";
 import Heading from "../components/Heading";
 import { Link } from "gatsby";
-import { useState, useEffect } from "react";
 import "../style/page.css";
+import { Helmet } from "react-helmet";
+import ogImage from "../images/image.jpg";
 
 const BlogsWrapper = styled.div`
   margin-top: 8em;
@@ -51,6 +52,30 @@ const BlogPage = ({ data, location }) => {
 
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ryan Soeyadi | Blog</title>
+        <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
+        <meta
+          name="description"
+          content="View blog posts by Pianist Ryan Soeyadi."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:title" content="Ryan Soeyadi | Blog" />
+        <meta
+          name="twitter:description"
+          content="Pianist Ryan Soeyadi | Contact"
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="Pianist Ryan Soeyadi | Blog" />
+        <meta
+          name="twitter:image:alt"
+          content="Photo of Pianist Ryan Soeyadi"
+        />
+        <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
+      </Helmet>
       <Layout>
         <BlogsWrapper>
           <Heading className="center">BLOGS</Heading>
@@ -58,9 +83,7 @@ const BlogPage = ({ data, location }) => {
           {data.allContentfulBlogPost.edges.map(({ node }, i) => (
             <Blog>
               <h1 className="listed-blog">
-                <Link to={`${node.slug}`}>
-                  {node.title}
-                </Link>
+                <Link to={`${node.slug}`}>{node.title}</Link>
               </h1>
               <p className="listed-blog-date">{node.date}</p>
             </Blog>

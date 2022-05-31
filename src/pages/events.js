@@ -6,6 +6,8 @@ import styled from "styled-components";
 import Heading from "../components/Heading";
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { Helmet } from "react-helmet";
+import ogImage from "../images/image.jpg";
 
 const EventsWrapper = styled.div`
   margin-top: 8em;
@@ -129,6 +131,28 @@ const Image = styled.div`
 const EventsPage = ({ data, location, props }) => {
   return (
     <>
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Ryan Soeyadi | Events</title>
+        <link rel="canonical" href="https://www.ryansoeyadipianist.com/" />
+        <meta name="description" content="View Pianist Ryan Soeyadi's upcoming and past performances." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.ryansoeyadipianist.com/" />
+        <meta property="og:image" content={ogImage} />
+        <meta name="twitter:title" content="Ryan Soeyadi | Events" />
+        <meta
+          name="twitter:description"
+          content="Pianist Ryan Soeyadi | Events"
+        />
+        <meta name="twitter:image" content={ogImage} />
+        <meta name="twitter:card" content="Pianist Ryan Soeyadi | Events" />
+        <meta
+          name="twitter:image:alt"
+          content="Photo of Pianist Ryan Soeyadi"
+        />
+
+        <meta property="og:site_name" content="Ryan Soeyadi Pianist" />
+      </Helmet>
       <Layout>
         <EventsWrapper>
           <Heading className="center">Events</Heading>

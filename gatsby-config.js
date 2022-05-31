@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -20,7 +20,7 @@ module.exports = {
         fonts: [`Playfair Display`, `Great Vibes`],
         display: "swap",
       },
-    },  
+    },
     `gatsby-transformer-remark`,
     {
       resolve: `gatsby-source-contentful`,
@@ -37,14 +37,14 @@ module.exports = {
       },
     },
     {
-  resolve: 'gatsby-plugin-react-svg',
-  options: {
-    rule: {
-      include: /svg/
-    }
-  }
-},
-{
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /svg/,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Ryan Soeyadi | Pianist`,
@@ -53,9 +53,9 @@ module.exports = {
         background_color: `#fff`,
         theme_color: `#fff`,
         display: `standalone`,
-	icon: `src/images/favicon.jpg`,
+        icon: `src/images/favicon.jpg`,
       },
-    }
- 
+    },
+    `gatsby-plugin-react-helmet`,
   ],
 };
