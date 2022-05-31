@@ -50,6 +50,11 @@ const Wrapper = styled.div`
 
 const Form = styled.div`
   margin-top: 1.5em;
+
+  form {
+    margin-top: 1em;
+    max-width: 700px;
+  }
   label,
   input,
   textarea {
@@ -152,12 +157,17 @@ const Form = styled.div`
 `;
 
 const FormGroup = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2em;
+  
 
 `
 
 const FormGroupLabels = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 2em;
 `;
 const ContactPage = (props) => {
   const image = getImage(
@@ -231,7 +241,7 @@ const ContactPage = (props) => {
                     required=""
                     type="text"
                     required
-                  />{" "}
+                  />
                 </FormGroup>
                 <label for="messengerEmail">
                   Email Address<em>&#x2a;</em>
