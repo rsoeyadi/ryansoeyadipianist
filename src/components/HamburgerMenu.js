@@ -79,6 +79,11 @@ const MenuLinks = styled.nav`
     padding: 0;
   }
 
+  ul:last-child div { // this is for just YouTube. Get rid of it if you want YouTube and Instagram icons
+    // center the single icon
+    margin: 0 auto;
+  }
+
   li {
     margin-top: 2.5rem;
   }
