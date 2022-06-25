@@ -79,9 +79,9 @@ const BlogPostWrapper = styled.div`
     .content {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      max-width: 1125px;
+      max-width: 1600px;
       margin: 2em auto 0;
-      grid-column-gap: 1.5em;
+      grid-column-gap: 2.5em;
     }
 
     .gatsby-image-wrapper, p {
