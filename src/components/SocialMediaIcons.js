@@ -5,8 +5,9 @@ import Instagram from "../images/svg/instagram.svg"
 
 const IconsWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 100px;
+ // grid-template-columns: 1fr 1fr;  // this is for 2 icons 
+  grid-template-columns: 1fr;
+  max-width: 50px;
 
   svg {
     cursor: pointer;
@@ -42,9 +43,9 @@ const SocialMediaIcons = () => {
       <a href="https://www.youtube.com/c/RyanSoeyadi" >
         <YouTube />
       </a>
-      <a href="https://www.instagram.com/ryansoeyadi/?hl=en" >
+      {/* <a href="https://www.instagram.com/ryansoeyadi/?hl=en" >
         <Instagram />
-      </a>
+      </a> */}
     </IconsWrapper>
   );
 };
