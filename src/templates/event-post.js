@@ -104,8 +104,6 @@ const EventContentWrapper = styled.div`
 
   
   }
-
-   
 `;
 
 const Video = styled.div`

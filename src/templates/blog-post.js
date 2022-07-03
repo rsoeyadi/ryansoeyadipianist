@@ -94,9 +94,8 @@ const BlogPostWrapper = styled.div`
 
   
   }
-
-   
 `;
+
 const BlogPost = (props) => {
   const image = getImage(props.data.contentfulBlogPost.image.gatsbyImageData);
   return (
